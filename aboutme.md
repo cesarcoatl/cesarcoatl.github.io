@@ -4,7 +4,7 @@ title: About me
 subtitle: What I've done, where you can find me, and everything in between.
 ---
 
-My name is César Román, I graduated from [CETYS Universidad](https://www.cetys.mx/campus-mexicali/) with a B.S. in Computer Science back in December 2004, and I've been writing lines of code since the 90's, and professionally since 2005. Telecommuting since December 2012.
+My name is César Román, I graduated from [CETYS Universidad](https://www.cetys.mx/campus-mexicali/) with a B.S. in Computer Science back in December 2004, and I've been writing lines of code since the '90s, and professionally since 2005. Telecommuting since December 2012.
 
 I have a passion for technology, software development, database design, music, and writing. So you might find posts related to these and more subjects.
 
@@ -16,4 +16,4 @@ I've been exposed to computers and coding since an early age, some may say, with
 
 ### Socials
 
-Feel free to subscribe to my [feed](/feed.xml), or follow me on [GitHub](https://github.com/thecesrom), [Twitter](https://twitter.com/thecesrom) or even [LinkedIn](https://www.linkedin.com/in/cesrom/).
+Feel free to subscribe to my [feed](/feed.xml), or follow me on [GitHub](https://github.com/thecesrom), [Twitter](https://twitter.com/thecesrom), or even [LinkedIn](https://www.linkedin.com/in/cesrom/).
