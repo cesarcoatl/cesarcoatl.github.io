@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll::Compose - A must-have plugin
 subtitle: Streamline your writing in Jekyll with these commands
-tags: github-pages, jekyll, quick-take
+tags: [github-pages, jekyll, quick-take]
 date: 2020-09-04 11:48 -0700
 ---
 As you may have noticed, I just recently started this Jekyll blog and still getting the hang of it.
