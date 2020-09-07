@@ -58,7 +58,7 @@ url-pretty: "thecesrom.github.io"
 excerpt_length: 50
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "azure,data,pycharm,python,sql,studio,vscode"
 
 # --- Colours / background image --- #
 
@@ -155,7 +155,7 @@ date_format: "%B %-d, %Y"
 timezone: "America/Tijuana"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:categories/:year/:month/:day/:title/
 paginate: 5
 
 kramdown:
