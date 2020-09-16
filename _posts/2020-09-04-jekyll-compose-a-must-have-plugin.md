@@ -26,7 +26,7 @@ end
 After successfully installing it, just by typing the following command I get a new drat under the `_drafts` folder:
 
 ```bash
-jekyll draft "New Draft"
+bundle exec jekyll draft "New Draft"
 ```
 
 And `jekyll-compose` takes care of properly naming the file, so you can take care of the important stuff.
@@ -35,9 +35,9 @@ And `jekyll-compose` takes care of properly naming the file, so you can take car
 
 1. Add `jekyll-compose` to your `Gemfile`
 1. Execute `bundle` command
-1. `jekyll draft "{title}"`
+1. `bundle exec jekyll draft "{title}"`
 1. Write your post
-1. `jekyll publish _drafts/{title}.md`
+1. `bundle exec jekyll publish _drafts/{title}.md`
 1. Commit and push
 1. Success!
 
