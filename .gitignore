@@ -5,6 +5,10 @@ _site/
 .jekyll-metadata
 vendor
 
+# Beautiful Jekyll
+Gemfile.lock
+beautiful-jekyll-theme-*.gem
+
 # macOS
 # General
 .DS_Store
