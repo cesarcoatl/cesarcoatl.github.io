@@ -4,6 +4,7 @@ title: Creating a bootable installer for macOS
 subtitle: Breathing new life into my MacBook Air one last time
 cover-img: assets/img/macOS-Catalina-sunset-1440x900.jpg
 thumbnail-img: assets/img/macOS-Catalina-230x0w.png
+tags: macos
 date: 2020-09-16 13:23 -0700
 ---
 Since November 2012, I've been a proud owner of a [MacBook Air (13-inch, Mid 2012)](https://support.apple.com/kb/SP670?locale=en_US){:target="_blank"}, and it is with sadness that I must accept it has reached its end-of-life with the upcoming release of [Big Sur](https://www.apple.com/macos/big-sur-preview/){:target="_blank"}.
