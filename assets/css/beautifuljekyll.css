@@ -924,7 +924,7 @@ pre {
 }
 
 /* --- Notification boxes --- */
-.box-note, .box-warning, .box-error, .box-success {
+.box-error, .box-note, .box-success, .box-warning {
   padding: 0.9375rem 0.9375rem 0.9375rem 0.625rem;
   margin: 1.25rem 1.25rem 1.25rem 0.3125rem;
   border: 1px solid #eee;
@@ -932,24 +932,24 @@ pre {
   border-radius: 0.3125rem 0.1875rem 0.1875rem 0.3125rem;
 }
 
-.box-note {
-  background-color: #eee;
-  border-left-color: #2980b9;
-}
-
-.box-warning {
-  background-color: #fdf5d4;
-  border-left-color: #f1c40f;
-}
-
 .box-error {
-  background-color: #f4dddb;
-  border-left-color: #c0392b;
+  background-color: #ffdacc;
+  border-left-color: #d9534f;
+}
+
+.box-note {
+  background-color: #e2daf1;
+  border-left-color: #5f3f96;
 }
 
 .box-success {
-  background-color: #98FB98;
-  border-left-color: #3CB371;
+  background-color: #d2f9d2;
+  border-left-color: #5cb85c;
+}
+
+.box-warning {
+  background-color: #fff1cc;
+  border-left-color: #f0ad4e;
 }
 
 /* --- Misc blog post styles --- */

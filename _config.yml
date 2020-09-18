@@ -58,7 +58,7 @@ url-pretty: "thecesrom.github.io"
 excerpt_length: 50
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "azure,cesrom,data,pycharm,python,sql,studio,thecesrom,vscode"
+keywords: "azure, cesrom, data, macos, pycharm, python, sql, thecesrom, vscode"
 
 # --- Colours / background image --- #
 
@@ -95,7 +95,7 @@ footer-link-col: "#404040"
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: ""
+google_analytics: "UA-178405186-1"
 
 # Google Tag Manager ID
 #gtm: ""
@@ -111,7 +111,7 @@ footer-link-col: "#404040"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-# disqus: "thecesrom-github-io.disqus.com"
+disqus: "thecesrom-github-io.disqus.com"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -171,7 +171,7 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      readtime: false # add estimated reading time on all blog posts
+      readtime: true # add estimated reading time on all blog posts
   -
     scope:
       path: "" # all files
