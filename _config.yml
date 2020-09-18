@@ -36,6 +36,7 @@ social-network-links:
   github: thecesrom
   twitter: thecesrom
   linkedin: cesrom
+  spotify: thecesrom
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
@@ -44,11 +45,11 @@ rss-description: thecesrom.github.io feed
 # --- General options --- #
 
 # Select which social network share links to show in posts
-share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
-  vk: false
+# share-links-active:
+#   twitter: true
+#   facebook: true
+#   linkedin: true
+#   vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
@@ -111,7 +112,7 @@ google_analytics: "UA-178405186-1"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "thecesrom-github-io.disqus.com"
+disqus: "thecesrom-github-io"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
