@@ -14,21 +14,20 @@ date: 2020-09-21 13:02 -0700
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
 - [Why penv?](#why-pyenv)
-    - [Installing pyenv](#installing-pyenv)
+- [Installing pyenv](#installing-pyenv)
     - [Installing Python 3.8](#installing-python-38)
     - [Installing Python 2.7](#installing-python-27)
     - [Setting a global version of Python](#setting-a-global-version-of-python)
-    - [Installing Jython](#installing-jython)
-        - [Installing jEnv](#installing-jenv)
-        - [Tapping adoptopenjdk/openjdk](#tapping-adoptopenjdkopenjdk)
-        - [Installing a JDK](#installing-a-jdk)
-        - [jenv doctor and add](#jenv-doctor-and-add)
-        - [Setting a global version of Java](#setting-a-global-version-of-java)
-        - [Verify Java version](#verify-java-version)
-        - [Testing Java](#testing-java)
-        - [Install Jython](#install-jython)
-        - [Testing Jython](#testing-jython)
-        - [Setting Jython locally](#setting-jython-locally)
+- [Installing Jython](#installing-jython)
+    - [Installing jEnv](#installing-jenv)
+    - [Tapping adoptopenjdk/openjdk](#tapping-adoptopenjdkopenjdk)
+    - [Installing a JDK](#installing-a-jdk)
+    - [jenv doctor and add](#jenv-doctor-and-add)
+    - [Setting a global version of Java](#setting-a-global-version-of-java)
+    - [Verify Java version](#verify-java-version)
+    - [Testing Java](#testing-java)
+    - [Install Jython](#install-jython)
+    - [Testing Jython](#testing-jython)
 - [Success!](#success)
 - [Sources](#sources)
 
@@ -58,7 +57,7 @@ This is where `pyenv` comes in.
 
 Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_url }}), I had already read about pyenv in a Real Python article titled ["Managing Multiple Python Versions With pyenv."](https://realpython.com/intro-to-pyenv/){:target="_blank"} So following the steps from that guide, and pyenv's own guide on using [Homebrew on macOS](https://github.com/pyenv/pyenv#homebrew-on-macos){:target="_blank"} I got my system ready for action.
 
-### Installing pyenv
+## Installing pyenv
 
 Install dependencies
 ```bash
@@ -171,13 +170,13 @@ $ pyenv versions
 
 Alternatively, you could [specify multiple versions as global at once](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global-advanced){:target="_blank"}.
 
-### Installing Jython
+## Installing Jython
 
 Before we can install Jython, first we must install Java. So here I will show you how to do it with `jenv`.
 
 But this is a little more involved than `pyenv`, so tag along!
 
-#### Installing jEnv
+### Installing jEnv
 
 On macOS, the simpler recommended way to install is using [Homebrew](https://brew.sh/){:target="_blank"}.
 ```bash
@@ -190,7 +189,7 @@ $ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
 $ echo 'if which jenv > /dev/null; then eval "$(jenv init -)"; fi' >> ~/.zshrc
 ```
 
-#### Tapping adoptopenjdk/openjdk
+### Tapping adoptopenjdk/openjdk
 
 To stay with a specific major release, activate the AdoptOpenJDK tap with `brew tap` and then install the desired version with `brew cask install`:
 
@@ -218,7 +217,7 @@ adoptopenjdk11-openj9                  adoptopenjdk13-jre                     ad
 adoptopenjdk11-openj9-jre              adoptopenjdk13-openj9                  adoptopenjdk15-jre                     sapmachine-jdk
 ```
 
-#### Installing a JDK
+### Installing a JDK
 
 In my case, I will install JDK 11, so I run the following command:
 
@@ -227,7 +226,7 @@ $ brew cask install adoptopenjdk11
 🍺  adoptopenjdk11 was successfully installed!
 ```
 
-#### jenv doctor and add
+### jenv doctor and add
 
 To verify `jenv` was installed, run `jenv doctor`.
 
@@ -268,7 +267,7 @@ $ jenv versions
   openjdk64-11.0.8
 ```
 
-#### Setting a global version of Java
+### Setting a global version of Java
 
 Just as with `rbenv` and `pyenv`, we can set `global` or `local` versions we wish to use.
 
@@ -284,7 +283,7 @@ $ jenv versions
   openjdk64-11.0.8
 ```
 
-#### Verify Java version
+### Verify Java version
 
 To verify the Java version you're running by default, run `java --version`:
 
@@ -302,7 +301,7 @@ $ which java
 /usr/local/opt/jenv/shims/java
 ```
 
-#### Testing Java
+### Testing Java
 
 To test our Java set up, we will create a simple "Hello, World!" application.
 
@@ -330,7 +329,7 @@ Hello, World!
 
 Once this has been successfully tested, let's install Jython.
 
-#### Install Jython
+### Install Jython
 
 First, let's list all Jython versions available to `pyenv` by running the following command:
 
@@ -363,11 +362,9 @@ $ pyenv versions
   jython-2.7.1
 ```
 
-#### Testing Jython
+### Testing Jython
 
 To test our Jython set up, we first must set Jython locally, since we already have selected 3.8.5 as `global`.
-
-#### Setting Jython locally
 
 Let's use Jython locally by running the following commands:
 
