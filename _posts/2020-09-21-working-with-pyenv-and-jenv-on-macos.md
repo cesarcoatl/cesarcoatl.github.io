@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with pyenv and jenv on macOS
+title: Working with pyenv and jEnv on macOS
 tags:
 - guide
 - homebrew
