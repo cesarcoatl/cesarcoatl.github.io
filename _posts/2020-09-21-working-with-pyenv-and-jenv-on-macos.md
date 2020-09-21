@@ -71,7 +71,7 @@ $ brew install pyenv
 
 Load `pyenv` automatically by running the following command to add it to your shell
 ```bash
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
 
 Restart shell
