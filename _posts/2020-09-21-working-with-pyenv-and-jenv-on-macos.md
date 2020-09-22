@@ -13,7 +13,7 @@ date: 2020-09-21 13:02 -0700
 ## Table of Contents
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
-- [Why penv?](#why-pyenv)
+- [Why pyenv?](#why-pyenv)
 - [Installing pyenv](#installing-pyenv)
     - [Installing Python 3.8](#installing-python-38)
     - [Installing Python 2.7](#installing-python-27)
