@@ -12,6 +12,7 @@ navbar-links:
   About Me: "aboutme"
   Projects:
     - Ignition: "https://thecesrom.github.io/Ignition"
+    - incendium: "https://github.com/thecesrom/incendium"
 
 # --- Logo --- #
 
