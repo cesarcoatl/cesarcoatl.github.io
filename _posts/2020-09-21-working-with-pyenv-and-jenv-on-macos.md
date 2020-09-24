@@ -19,12 +19,13 @@ date: 2020-09-21 13:02 -0700
     - [Installing Python 2.7](#installing-python-27)
     - [Setting a global version of Python](#setting-a-global-version-of-python)
 - [Installing Jython](#installing-jython)
-    - [Installing jEnv](#installing-jenv)
     - [Tapping adoptopenjdk/openjdk](#tapping-adoptopenjdkopenjdk)
     - [Installing a JDK](#installing-a-jdk)
+    - [Installing jEnv](#installing-jenv)
     - [jenv doctor and add](#jenv-doctor-and-add)
     - [Setting a global version of Java](#setting-a-global-version-of-java)
     - [Verify Java version](#verify-java-version)
+    - [Switch between different JDK versions](#switch-between-different-jdk-versions)
     - [Testing Java](#testing-java)
     - [Install Jython](#install-jython)
     - [Testing Jython](#testing-jython)
@@ -176,19 +177,6 @@ Before we can install Jython, first we must install Java. So here I will show yo
 
 But this is a little more involved than `pyenv`, so tag along!
 
-### Installing jEnv
-
-On macOS, the simpler recommended way to install is using [Homebrew](https://brew.sh/){:target="_blank"}.
-```bash
-$ brew install jenv
-```
-
-Adding it to Shell
-```bash
-$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
-$ echo 'if which jenv > /dev/null; then eval "$(jenv init -)"; fi' >> ~/.zshrc
-```
-
 ### Tapping adoptopenjdk/openjdk
 
 To stay with a specific major release, activate the AdoptOpenJDK tap with `brew tap` and then install the desired version with `brew cask install`:
@@ -225,6 +213,20 @@ In my case, I will install JDK 11, so I run the following command:
 $ brew cask install adoptopenjdk11
 🍺  adoptopenjdk11 was successfully installed!
 ```
+
+### Installing jEnv
+
+On macOS, the simpler recommended way to install is using [Homebrew](https://brew.sh/){:target="_blank"}.
+```bash
+$ brew install jenv
+```
+
+Adding it to Shell
+```bash
+$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+$ echo 'if which jenv > /dev/null; then eval "$(jenv init -)"; fi' >> ~/.zshrc
+```
+
 
 ### jenv doctor and add
 
@@ -299,6 +301,18 @@ And `which java` to locate `java` in your path:
 ```bash
 $ which java
 /usr/local/opt/jenv/shims/java
+```
+
+### Switch between different JDK versions
+
+Add the following function in you `~/zshrc`.
+
+```bash
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        java -version
+ }
 ```
 
 ### Testing Java
@@ -510,4 +524,5 @@ Happy coding!
 - Managing Multiple Python Versions With pyenv - [https://realpython.com/intro-to-pyenv/](https://realpython.com/intro-to-pyenv/){:target="_blank"}
 - jEnv - Manage your Java environment - [https://www.jenv.be/](https://www.jenv.be/){:target="_blank"}
 - AdoptOpenJDK - Open source, prebuilt OpenJDK binaries - [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
+- How to install Java with brew and jenv || Kenan Hançer Blog - [https://kenanhancer.com/2020/05/09/how-to-install-java-with-brew-and-jenv/](https://kenanhancer.com/2020/05/09/how-to-install-java-with-brew-and-jenv/){:target="_blank"}
 - Jython - [https://www.jython.org/](https://www.jython.org/){:target="_blank"}
