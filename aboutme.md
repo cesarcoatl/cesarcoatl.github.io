@@ -16,4 +16,4 @@ I've been exposed to computers and coding since an early age, some may say, with
 
 ### Socials
 
-Feel free to subscribe to my [feed](/feed.xml){:target="_blank"}, or follow me on [GitHub](https://github.com/thecesrom){:target="_blank"}, [Twitter](https://twitter.com/thecesrom){:target="_blank"}, or even [LinkedIn](https://www.linkedin.com/in/cesrom/){:target="_blank"}.
+Feel free to subscribe to my [feed]({{ site.url }}/feed.xml){:target="_blank"}, or follow me on [GitHub](https://github.com/thecesrom){:target="_blank"}, or [Twitter](https://twitter.com/thecesrom){:target="_blank"}.

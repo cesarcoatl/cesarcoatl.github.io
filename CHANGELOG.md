@@ -1,3 +1,9 @@
+## Unreleased version
+
+- Changed the width at which the navbar collapses to a higher threshold because most modern non-mobile browsers are >1000px
+- Fixed bug where navbar secondary level dropdown items didn't inherit te same colour as the primary navbar links
+- Fixed bug where the navbar "burger" collapsed button didn't always revert back to a light colour
+
 ## v5.0.0 (2020-09-15)
 
 One of the major changes in this version is that a lot of time was spent on rethinking the entire SEO and social media sharing model (how a page looks on eg. Google, Twitter, Facebok). It was redesigned to be more simple and customizable. The new documentation has a section dedicated to SEO and social media sharing of a page. Unfortunately some changes that are not backwards-compatible had to be made.

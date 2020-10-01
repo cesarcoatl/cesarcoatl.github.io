@@ -1,3 +1,8 @@
+# Welcome to Beautiful Jekyll!
+# This config file is meant for settings that affect your entire website. When you first
+# set up your website you should go through all these settings and edit them, but after
+# the initial set up you won't need to come back to this file often.
+
 # --- Required options --- #
 
 # Name of website
@@ -11,7 +16,7 @@ author: César Román
 navbar-links:
   About Me: "aboutme"
   Projects:
-    - Ignition: "https://thecesrom.github.io/Ignition"
+    - Ignition: "https://github.com/thecesrom/Ignition"
     - incendium: "https://github.com/thecesrom/incendium"
 
 # --- Logo --- #
@@ -57,7 +62,13 @@ rss-description: thecesrom.github.io feed
 url-pretty: "thecesrom.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 50
+excerpt_length: 20
+
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
 keywords: "azure, cesrom, data, macos, pycharm, python, sql, thecesrom, vscode"
@@ -87,9 +98,13 @@ footer-link-col: "#404040"
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
 #mobile-theme-col: "#0085A1"
 
-# For any extra customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 #site-css:
 #  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
 
 # --- Web Analytics Section --- #
 
@@ -150,7 +165,6 @@ date_format: "%B %-d, %Y"
 # Facebook App ID
 #fb_app_id: ""
 
-
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
@@ -158,7 +172,7 @@ timezone: "America/Tijuana"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
-paginate: 5
+paginate: 7
 
 kramdown:
   input: GFM
@@ -176,7 +190,7 @@ defaults:
       readtime: true # add estimated reading time on all blog posts
   -
     scope:
-      path: "" # all files
+      path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
       show-avatar: true
