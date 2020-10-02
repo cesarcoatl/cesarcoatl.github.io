@@ -116,7 +116,7 @@ Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43)
 1. Open or create a project
 1. Open **Preferences** (&#8984;+,)
 1. Navigate to **Preferences > Project > Project Interpreter**
-1. Click on the gear icon and select **Add..**
+1. Click on the gear icon and select **Add...**
 1. Choose **System Intepreter**
 1. Select **/usr/local/bin/jython2.7.1** from the **Interpreter** list, and click **OK**
 1. PyCharm will name it **Jython 2.7** by default, but you can change it
