@@ -4,7 +4,6 @@ title: Working with pyenv on macOS
 tags:
 - guide
 - homebrew
-- jython
 - macos
 - pyenv
 - python
