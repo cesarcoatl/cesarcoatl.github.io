@@ -8,6 +8,7 @@ tags:
 - macos
 - pyenv
 - python
+- tutorial
 date: 2020-09-21 13:02 -0700
 edited: 2020-09-25 11:11 -0700
 ---
