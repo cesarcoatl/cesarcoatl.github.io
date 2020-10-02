@@ -2,7 +2,7 @@
 layout: post
 title: Configuring Jython in PyCharm
 subtitle: How I struggled and eventually succeeded, so you don't have to
-tags: ignition, jython, macos, pycharm, tutorial
+tags: [ignition, jython, macos, pycharm, tutorial]
 date: 2020-10-01 19:02 -0700
 ---
 ## Table of Contents
