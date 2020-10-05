@@ -2,8 +2,8 @@
 layout: post
 title: Creating a bootable installer for macOS
 subtitle: Breathing new life into my MacBook Air one last time
-cover-img: "https://thecesrom.dev/assets/img/macOS-Catalina-sunset-1440x900.jpg"
-thumbnail-img: "https://thecesrom.dev/assets/img/macOS-Catalina-230x0w.png"
+cover-img: /assets/img/macOS-Catalina-sunset-1440x900.jpg
+thumbnail-img: /assets/img/macOS-Catalina-230x0w.png
 tags: [guide, macos]
 date: 2020-09-16 13:23 -0700
 ---
