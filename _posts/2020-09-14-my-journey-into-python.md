@@ -2,7 +2,7 @@
 layout: post
 title: My journey into Python
 cover-img: "https://thecesrom.dev/assets/img/IMG_2032.jpg"
-thumbnail-img: "https://thecesrom.dev/assets/img/python-200x200.png"
+thumbnail-img: /assets/img/python-200x200.png
 tags: python
 date: 2020-09-14 10:58 -0700
 ---
