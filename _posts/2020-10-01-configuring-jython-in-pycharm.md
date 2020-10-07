@@ -14,7 +14,7 @@ date: 2020-10-01 19:02 -0700
 - [Conclusion](#conclusion)
 - [Sources](#sources)
 
-### What is Jython?
+### What is Jython?[^1]
 
 Jython is a Java implementation of Python that combines expressive power with clarity. Jython is freely available for both commercial and non-commercial use and is distributed with source code under the PSF License v2. Jython is complementary to Java and is especially suited for the following tasks:
 
@@ -26,7 +26,7 @@ Jython is a Java implementation of Python that combines expressive power with cl
 
 That's a good question, and the answer is because at work I am one of the developers for [SCADA](https://en.wikipedia.org/wiki/SCADA){:target="_blank"} applications using the [Ignition](https://inductiveautomation.com/ignition/){:target="_blank"} platform.
 
-> **Where is scripting used?**
+> **Where is scripting used?**[^2]
 >
 > [J]ython is used in many places in Ignition. Each location has its own events that trigger your scripts to run, and add functionality to your projects in different ways.
 
@@ -150,5 +150,5 @@ And with that, my friends, you are all set.
 Thanks, for reading.
 
 ### Sources
-1. Jython - [link](https://www.jython.org/){:target="_blank"}
-1. Ignition User Manual 8.0 - [link](https://docs.inductiveautomation.com/display/DOC80/Scripting#Scripting-WhereIsScriptingUsed?){:target="_blank}
+[^1]: Jython - [link](https://www.jython.org/){:target="_blank"}
+[^2]: Ignition User Manual 8.0 - [link](https://docs.inductiveautomation.com/display/DOC80/Scripting#Scripting-WhereIsScriptingUsed?){:target="_blank}

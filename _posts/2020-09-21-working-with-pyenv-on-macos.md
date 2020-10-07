@@ -23,10 +23,11 @@ edited: 2020-09-25 11:11 -0700
     - [Installing Python 2.7](#installing-python-27)
     - [Setting a global version of Python](#setting-a-global-version-of-python)
 - [Success!](#success)
+- [Further reading](#further-reading)
 - [Sources](#sources)
 
 ## Introduction
-This is not meant to be a detailed guide on the many ways you could install Homebrew, pyenv, jEnv, and Jython, but a look into what I did to get my environment set up for my personal projects.
+This is not meant to be a detailed guide on the many ways you could install Homebrew, and pyenv, but a look into what I did to get my environment set up for my personal projects.
 
 ## Pre-requisites
 Xcode Command Line Tools
@@ -47,9 +48,9 @@ In my personal experience, working with multiple versions of Python in Windows i
 
 This is where `pyenv` comes in.
 
-> pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
+> pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.[^1]
 
-Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_url }}), I had already read about pyenv in a Real Python article titled ["Managing Multiple Python Versions With pyenv."](https://realpython.com/intro-to-pyenv/){:target="_blank"} So following the steps from that guide, and pyenv's own guide on using [Homebrew on macOS](https://github.com/pyenv/pyenv#homebrew-on-macos){:target="_blank"} I got my system ready for action.
+Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_url }}), I had already read about pyenv in a Real Python article titled ["Managing Multiple Python Versions With pyenv."](https://realpython.com/intro-to-pyenv/){:target="_blank"}[^2] So following the steps from that guide, and pyenv's own guide on using [Homebrew on macOS](https://github.com/pyenv/pyenv#homebrew-on-macos){:target="_blank"} I got my system ready for action.
 
 ## Installing pyenv
 
@@ -170,7 +171,9 @@ And by doing all of the above I have completed setting up my computer for workin
 
 Happy coding!
 
-## Sources:
-- pyenv :: Modern Python Developer's Toolkit - [https://pycon.switowski.com/02-packages/pyenv/](https://pycon.switowski.com/02-packages/pyenv/){:target="_blank"}
-- pyenv/pyenv: Simple Python version management - [https://github.com/pyenv/pyenv](https://github.com/pyenv/pyenv){:target="_blank"}
-- Managing Multiple Python Versions With pyenv - [https://realpython.com/intro-to-pyenv/](https://realpython.com/intro-to-pyenv/){:target="_blank"}
+## Further reading
+1. pyenv :: Modern Python Developer's Toolkit - [https://pycon.switowski.com/02-packages/pyenv/](https://pycon.switowski.com/02-packages/pyenv/){:target="_blank"}
+
+## Sources
+[^1]: pyenv/pyenv: Simple Python version management - [https://github.com/pyenv/pyenv](https://github.com/pyenv/pyenv){:target="_blank"}
+[^2]: Managing Multiple Python Versions With pyenv - [https://realpython.com/intro-to-pyenv/](https://realpython.com/intro-to-pyenv/){:target="_blank"}
