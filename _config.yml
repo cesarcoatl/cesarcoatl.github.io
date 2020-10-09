@@ -16,6 +16,7 @@ author: César Román
 
 navbar-links:
   About Me: "aboutme"
+  Archive: "archive"
   Projects:
     - Ignition: "https://github.com/thecesrom/Ignition"
     - incendium: "https://github.com/thecesrom/incendium"
