@@ -1,12 +1,12 @@
 ---
 layout: post
-title: How to verify your Organization's domain on Google Domains
+title: How to verify your GitHub Organization's domain on Google Domains
 tags:
 - github
 - google
 - quick-take
 - tutorial
-date: 2020-10-14 18:00 -0700
+date: 2020-10-14 18:07 -0700
 ---
 Recently I purchased the thecesrom.dev domain at Google Domains, as it was cheaper on Google than on Namecheap. And inspired by that I decided that I would also create an organization, so [coatl.dev](https://github.com/coatl-dev){:target="_blank"} was born.
 
@@ -20,16 +20,15 @@ So here are the steps I followed for Google Domains:
 
 1. Go to your Github's organization's profile page
 1. Navigate to **Settings** > **Verified domains** and click on **Add a domain**
-1. Enter your domain, and click on **Add domain**
-    `example.com`
-1. GitHub will require you to add a `DNS TXT` record, e.g. `_github-challenge-<ORGANIZATION_NAME>.example.com.`, and it will also provide a value for that record. 
+1. Enter your domain, and click on **Add domain**, e.g.`example.com`
+1. GitHub will require you to add a `DNS TXT` record, e.g. `_github-challenge-<ORGANIZATION_NAME>.example.com.`, and it will also provide a value for that record
 1. Take note of both, and head over to **Google Domains**
 1. Click on **Manage** on the domain you're attempting to verify
 1. Select **DNS** from the left pane and scroll all the way down to **Custom resource records**
 1. On the **Name** field enter `_github-challenge-<ORGANIZATION_NAME>`. Note that we're not adding `.example.com.` as GitHub suggests
 1. Select `TXT` as **Type** from the dropdown
 1. Leave the `1H` setting for **TTL**
-1. On the **Data** field paste the code from GitHub, and click on **Add**. The following notification will appear: "Changes to example.com saved. They'll take effect within the next 48 hours. Dismiss."
+1. On the **Data** field paste the code from GitHub, and click on **Add**. The following notification will appear: "Changes to example.com saved. They'll take effect within the next 48 hours."
 1. Go back to the verification process on GitHub, and click on **Verify domain**, which will tell you that the verification process might take up to 72 hours
 
 And as easy as that, you're done.
