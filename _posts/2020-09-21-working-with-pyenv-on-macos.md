@@ -9,17 +9,14 @@ tags:
 - python
 - tutorial
 date: 2020-09-21 13:02 -0700
-edited: 2020-09-25 11:11 -0700
+last-updated: 2020-09-25 11:11 -0700
 ---
-
-*[Updated on {{ page.edited | date: "%Y-%m-%d %H:%M:%S.%L %Z" }}]*
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
 - [Why pyenv?](#why-pyenv)
 - [Installing pyenv](#installing-pyenv)
-    - [Installing Python 3.8](#installing-python-38)
+    - [Installing Python 3.9](#installing-python-39)
     - [Installing Python 2.7](#installing-python-27)
     - [Setting a global version of Python](#setting-a-global-version-of-python)
 - [Success!](#success)
@@ -76,24 +73,19 @@ $ exec "$SHELL"
 
 Next, I'll install specific Python versions.
 
-### Installing Python 3.8
+### Installing Python 3.9
 
 First, let's get a list of all 3.8 versions:
 ```bash
-$ pyenv install --list | grep " 3\.8"
-  3.8.0
-  3.8-dev
-  3.8.1
-  3.8.2
-  3.8.3
-  3.8.4
-  3.8.5
+$ pyenv install --list | grep " 3\.9"
+  3.9.0
+  3.9-dev
 ```
 
-Installing the latest 3.8 release.
+Installing the latest 3.9 release.
 
 ```bash
-$ pyenv install 3.8.5
+$ pyenv install 3.9.0
 ```
 
 ### Installing Python 2.7
@@ -145,13 +137,13 @@ Run `pyenv versions` to list all Python versions known to pyenv; an asterisk wil
 $ pyenv versions
 * system (set by /Users/thecesrom/.pyenv/version)
   2.7.18
-  3.8.5
+  3.9.0
 ```
 
 Run `pyenv global <version>` to set the global version of Python to be used in all shells.
 
 ```bash
-$ pyenv global 3.8.5
+$ pyenv global 3.9.0
 ```
 
 Verify your selection by running `pyenv versions`.
@@ -160,7 +152,7 @@ Verify your selection by running `pyenv versions`.
 $ pyenv versions
   system
   2.7.18
-* 3.8.5 (set by /Users/thecesrom/.pyenv/version)
+* 3.9.0 (set by /Users/thecesrom/.pyenv/version)
 ```
 
 Alternatively, you could [specify multiple versions as global at once](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global-advanced){:target="_blank"}.
