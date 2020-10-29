@@ -75,7 +75,7 @@ Next, I'll install specific Python versions.
 
 ### Installing Python 3.9
 
-First, let's get a list of all 3.8 versions:
+First, let's get a list of all 3.9 versions:
 ```bash
 $ pyenv install --list | grep " 3\.9"
   3.9.0
