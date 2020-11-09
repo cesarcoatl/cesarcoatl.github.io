@@ -9,7 +9,7 @@ tags:
 - python
 - tutorial
 date: 2020-09-21 13:02 -0700
-last-updated: 2020-10-29 12:31 -0700
+last-updated: 2020-11-08 21:04 -0800
 ---
 ## Table of Contents
 - [Introduction](#introduction)
@@ -27,10 +27,7 @@ last-updated: 2020-10-29 12:31 -0700
 This is not meant to be a detailed guide on the many ways you could install Homebrew, and pyenv, but a look into what I did to get my environment set up for my personal projects.
 
 ## Pre-requisites
-Xcode Command Line Tools
-```bash
-xcode-select --install
-```
+Xcode Command Line Tools ([link](https://developer.apple.com/download/more/?=xcode){:target="_blank"})
 
 Homebrew
 ```bash
