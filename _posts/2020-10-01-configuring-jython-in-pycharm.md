@@ -4,6 +4,7 @@ title: Configuring Jython in PyCharm
 subtitle: How I struggled and eventually succeeded, so you don't have to
 tags: [guide, ignition, jython, macos, pycharm]
 date: 2020-10-01 19:02 -0700
+last-updated: 2020-11-13 16:17 -0800
 ---
 ## Table of Contents
 - [What is Jython?](#what-is-jython)
@@ -71,16 +72,16 @@ Do not install Jython 2.7.2 as it is not currently supported by PyCharm. See [PY
 
 Since I intend to set up Jython as a Project Interpreter in PyCharm, and considering the versions used by Ignition, I'll download the following:
 
-1. Java 11 (LTS) from Azul ([.zip](https://cdn.azul.com/zulu/bin/zulu11.41.23-ca-jdk11.0.8-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.41.23-ca-jdk11.0.8-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.41.23-ca-jdk11.0.8-macosx_x64.tar.gz){:target="_blank"})
+1. Java 11.0.7 (LTS) from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
 1. [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
 
 Once Java has been installed, we run the following:
 
 ```bash
 $ java -version
-openjdk version "11.0.8" 2020-07-14 LTS
-OpenJDK Runtime Environment Zulu11.41+23-CA (build 11.0.8+10-LTS)
-OpenJDK 64-Bit Server VM Zulu11.41+23-CA (build 11.0.8+10-LTS, mixed mode)
+openjdk version "11.0.7" 2020-04-14 LTS
+OpenJDK Runtime Environment Zulu11.39+15-CA (build 11.0.7+10-LTS)
+OpenJDK 64-Bit Server VM Zulu11.39+15-CA (build 11.0.7+10-LTS, mixed mode)
 $ java -jar ~/Downloads/jython-installer-2.7.1.jar
 ```
 
@@ -93,22 +94,32 @@ I do not need `sudo` when creating the symlink at `/usr/local/bin`; Homebrew alr
 $ cd ~/jython2.7.1/bin
 $ chmod +x jython
 $ cd /usr/local/bin
-$ ln -s ~/jython2.7.1/bin/jython jython2.7.1
+$ ln -s ~/jython2.7.1/bin/jython jython
 ```
 
-And now I can run `jython2.7.1` anywhere.
+And now I can run `jython` anywhere.
 
-**NOTE:** There is a warning when running `jython2.7.1` with Java 11, but everything works fine.
+**NOTE:** There is a warning when running `jython` with Java 11, but everything works fine.
 
 ```bash
-$ jython2.7.1
+$ jython
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by org.python.core.PySystemState (file:/Users/thecesrom/jython2.7.1/jython.jar) to method java.io.Console.encoding()
 WARNING: Please consider reporting this to the maintainers of org.python.core.PySystemState
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43) 
-[OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.8
+[OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.7
+```
+
+To circumvent this, you must run Jython with the following flags:
+
+```bash
+$ jython -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED 
+Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43) 
+[OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.7
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
 ```
 
 ### Configuring Jython in PyCharm
@@ -118,8 +129,12 @@ Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43)
 1. Navigate to **Preferences > Project > Project Interpreter**
 1. Click on the gear icon and select **Add...**
 1. Choose **System Intepreter**
-1. Select **/usr/local/bin/jython2.7.1** from the **Interpreter** list, and click **OK**
+1. Select **/usr/local/bin/jython** from the **Interpreter** list, and click **OK**
 1. PyCharm will name it **Jython 2.7** by default, but you can change it
+1. Finally go to **Preferences > Build, Execution, Deployment > Console > Python Console** and add the following flags as **Interpreter options**
+    ```
+    -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED
+    ```
 
 To test it I will be using the [jython](https://github.com/thecesrom/Ignition/tree/jython){:target="_blank"} branch of my [Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} project.
 
