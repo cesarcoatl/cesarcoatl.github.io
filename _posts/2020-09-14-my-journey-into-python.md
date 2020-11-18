@@ -10,7 +10,7 @@ At my current job, I was hired as an ASP.NET Developer to maintain and extend an
 
 Jython, being a Java implementation of Python, gives the user access to the Java Platform. This means you get access to both Python and Java using Python 2.7 syntax. But more about Jython on a different post.
 
-As I mention in the ["about me"]({{ site.url }}/aboutme/) section, I’ve been writing lines of code from an early age, but professionally, I started my career working at a small company building Websites with PHP. Although I did an internship where we were working on JSP (back then JavaServer Pages, now [Jakarta Server Pages](https://en.wikipedia.org/wiki/Jakarta_Server_Pages){:target="_blank"})). Oh, memories!
+As I mention in the ["about me"]({{ site.url }}/aboutme/) section, I’ve been writing lines of code from an early age, but professionally, I started my career working at a small company building Websites with PHP. Although I did an internship where we were working on JSP (back then JavaServer Pages, now [Jakarta Server Pages](https://en.wikipedia.org/wiki/Jakarta_Server_Pages){:target="_blank"}). Oh, memories!
 
 After being exposed to these languages, I believe that learning the syntax for any language is the most trivial task while having (or developing) a [programmer mindset](https://mitcommlab.mit.edu/broad/commkit/coding-mindset/){:target="_blank"} is more important. And the second, most important factor, is having the right tools. There's no doubt about it.
 
