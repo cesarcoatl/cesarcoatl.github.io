@@ -10,7 +10,7 @@ date: 2020-12-09 19:22 -0800
 ## [8.1.1-jython](https://github.com/thecesrom/Ignition/releases/tag/v8.1.1-jython){:target="_blank"}
 
 
-Repository: [thecesrom/Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} · Tag: [v8.1.1-jython](https://github.com/thecesrom/Ignition/tree/v8.1.1-jython){:target="_blank"} · Commit: [2632b83](https://github.com/thecesrom/Ignition/commit/2632b83f78af7b69dd867371607f34d61e23accb){:target="_blank"} · Released by: [thecesrom](https://github.com/thecesrom){:target="_blank"}
+Repository: [thecesrom/Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} · Tag: [v8.1.1-jython](https://github.com/thecesrom/Ignition/releases/tag/v8.1.1-jython){:target="_blank"} · Commit: [2632b83](https://github.com/thecesrom/Ignition/commit/2632b83f78af7b69dd867371607f34d61e23accb){:target="_blank"} · Released by: [thecesrom](https://github.com/thecesrom){:target="_blank"}
 
 ### Added
 
