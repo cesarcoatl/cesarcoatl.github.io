@@ -23,7 +23,7 @@ Why that snippet? The main reason is because the body of the stored procedure is
 
 So there were a couple of solutions.
 
-**Option 1**. DIY, or fix-it-yourself. The file to modify is called `mssql.json` found at `/Applications/Azure\ Data\ Studio\ -\ Insiders.app/Contents/Resources/app/extensions/mssql/snippets` on macOS, or `C:\Program Files\Azure Data Studio\resources\app\extensions\mssql\snippets` on Windows.
+**Option 1**. DIY, or fix-it-yourself. The file to modify is called `mssql.json` found at `/Applications/Azure\ Data\ Studio.app/Contents/Resources/app/extensions/mssql/snippets` on macOS, or `C:\Program Files\Azure Data Studio\resources\app\extensions\mssql\snippets` on Windows.
 
 And it looks like this.
 
