@@ -20,6 +20,8 @@ navbar-links:
   Projects:
     - Ignition: "https://github.com/thecesrom/Ignition"
     - incendium: "https://github.com/thecesrom/incendium"
+  Organizations:
+    - coatl.dev: "https://github.com/coatl-dev"
 
 # --- Logo --- #
 
@@ -73,7 +75,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "azure, cesrom, data, macos, pycharm, python, sql, thecesrom, vscode"
+keywords: "azure, cesrom, data, homebrew, macos, pycharm, python, sql, thecesrom, vscode"
 
 # --- Colours / background image --- #
 
