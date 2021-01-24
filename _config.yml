@@ -17,11 +17,11 @@ author: César Román
 navbar-links:
   About Me: "aboutme"
   Archive: "archive"
+  Organizations:
+    - coatl.dev: "https://github.com/coatl-dev"
   Projects:
     - Ignition: "https://github.com/thecesrom/Ignition"
     - incendium: "https://github.com/thecesrom/incendium"
-  Organizations:
-    - coatl.dev: "https://github.com/coatl-dev"
 
 # --- Logo --- #
 
