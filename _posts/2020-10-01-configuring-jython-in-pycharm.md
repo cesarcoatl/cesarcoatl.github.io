@@ -73,7 +73,7 @@ Do not install Jython 2.7.2 as it is not currently supported by PyCharm. See [PY
 Since I intend to set up Jython as a Project Interpreter in PyCharm, and considering the versions used by Ignition, I'll download the following:
 
 1. Java 11.0.7 (LTS) from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
-1. Install Jython 2.7.1
+1. Jython 2.7.1
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}. Just tap [coatl-dev's Homebrew tap](https://github.com/coatl-dev/homebrew-coatl-dev/){:target="_blank"}, and install `jython@2.7.1`:
     ```bash
     $ brew install coatl-dev/coatl-dev/jython@2.7.1
