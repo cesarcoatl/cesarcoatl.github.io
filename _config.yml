@@ -4,7 +4,10 @@ remote_theme: daattali/beautiful-jekyll@5.0.0
 
 # Name of website
 title: César Román - Coder, Blogger
-# url: "https://thecesrom.dev/"
+# --- Production URL --- #
+url: "https://thecesrom.dev/"
+# --- Development URL --- #
+# url: "http://127.0.0.1:4000"
 
 # Your name to show in the footer
 author: César Román
