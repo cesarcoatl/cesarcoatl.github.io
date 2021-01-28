@@ -4,7 +4,7 @@ title: Configuring Jython in PyCharm
 subtitle: How I struggled and eventually succeeded, so you don't have to
 tags: [guide, ignition, jython, macos, pycharm]
 date: 2020-10-01 19:02 -0700
-last-updated: 2020-11-13 16:17 -0800
+last-updated: 2021-01-28 13:22 -0800
 ---
 ## Table of Contents
 - [What is Jython?](#what-is-jython)
@@ -73,7 +73,17 @@ Do not install Jython 2.7.2 as it is not currently supported by PyCharm. See [PY
 Since I intend to set up Jython as a Project Interpreter in PyCharm, and considering the versions used by Ignition, I'll download the following:
 
 1. Java 11.0.7 (LTS) from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
-1. [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
+1. Install Jython 2.7.1
+    1. Via [Homebrew](https://brew.sh/){:target="_blank"}. Just tap [coatl-dev's Homebrew tap](https://github.com/coatl-dev/homebrew-coatl-dev/){:target="_blank"}, and install `jython@2.7.1`:
+    ```bash
+    $ brew install coatl-dev/coatl-dev/jython@2.7.1
+    ```
+    Or
+    ```bash
+    $ brew tap coatl-dev/coatl-dev
+    $ brew install jython@2.7.1
+    ```
+    1. Or by downloading the installer [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
 
 Once Java has been installed, we run the following:
 

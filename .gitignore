@@ -5,10 +5,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 vendor
-
-# Beautiful Jekyll
 Gemfile.lock
-beautiful-jekyll-theme-*.gem
+_dev_config.yml
 
 # macOS
 # General
