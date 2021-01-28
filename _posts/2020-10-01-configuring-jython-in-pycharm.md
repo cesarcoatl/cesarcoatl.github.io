@@ -4,7 +4,7 @@ title: Configuring Jython in PyCharm
 subtitle: How I struggled and eventually succeeded, so you don't have to
 tags: [guide, ignition, jython, macos, pycharm]
 date: 2020-10-01 19:02 -0700
-last-updated: 2021-01-28 14:25 -0800
+last-updated: 2021-01-28 15:03 -0800
 ---
 ## Table of Contents
 - [What is Jython?](#what-is-jython)
@@ -116,7 +116,7 @@ $ brew install coatl-dev/coatl-dev/jython@2.7.1
 ==> Downloading https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.1/jython-installer-2.7.1
 ==> Downloading from https://repo1.maven.org/maven2/org/python/jython-installer/2.7.1/jython-installer-2.7.1.jar
 ######################################################################## 100.0%
-==> java -jar /Users/thecesrom/Library/Caches/Homebrew/downloads/558a886fedd7c18b1e12419bd4ab398b3ad7aaa902df4f5686ef3b695b89f2b9--jython-installer-2.7.1.jar
+==> java -jar /Users/thecesrom/Library/Caches/Homebrew/downloads/558a886fedd7c18b1e12419bd4ab398b3ad7aaa902df4f5686ef3b695b89f2b9--jython-installer-2.7.1.jar -s -d /usr/local/Cellar/jython@2.7.1/2.7.1/libexec
 🍺  /usr/local/Cellar/jython@2.7.1/2.7.1: 3,785 files, 148.7MB, built in 1 minute 22 seconds
 ```
 
