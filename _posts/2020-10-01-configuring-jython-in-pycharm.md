@@ -166,4 +166,4 @@ Thanks, for reading.
 
 ### Sources
 [^1]: Jython - [link](https://www.jython.org/){:target="_blank"}
-[^2]: Ignition User Manual 8.0 - [link](https://docs.inductiveautomation.com/display/DOC80/Scripting#Scripting-WhereIsScriptingUsed?){:target="_blank}
+[^2]: Ignition User Manual 8.0 - [link](https://docs.inductiveautomation.com/display/DOC80/Scripting#Scripting-WhereIsScriptingUsed?){:target="_blank"}

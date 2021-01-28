@@ -1,13 +1,10 @@
-# Welcome to Beautiful Jekyll!
-# This config file is meant for settings that affect your entire website. When you first
-# set up your website you should go through all these settings and edit them, but after
-# the initial set up you won't need to come back to this file often.
+remote_theme: daattali/beautiful-jekyll@5.0.0
 
 # --- Required options --- #
 
 # Name of website
 title: César Román - Coder, Blogger
-url: "https://thecesrom.dev"
+# url: "https://thecesrom.dev/"
 
 # Your name to show in the footer
 author: César Román
@@ -15,7 +12,7 @@ author: César Román
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "about"
   Archive: "archive"
   Organizations:
     - coatl.dev: "https://github.com/coatl-dev"
@@ -45,8 +42,6 @@ social-network-links:
   email: "cesar@thecesrom.dev"
   github: thecesrom
   twitter: thecesrom
-  spotify: flimmx
-  bandcamp: thecesaroman
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
@@ -55,11 +50,11 @@ rss-description: thecesrom.dev feed
 # --- General options --- #
 
 # Select which social network share links to show in posts
-# share-links-active:
-#   twitter: true
-#   facebook: true
-#   linkedin: true
-#   vk: false
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
@@ -75,7 +70,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "azure, cesrom, data, homebrew, macos, pycharm, python, sql, thecesrom, vscode"
+keywords: "azure,cesrom,coatl,coatl.dev,coatl-dev,__coatldev__,data,homebrew,macos,pycharm,python,sql,thecesrom,vscode"
 
 # --- Colours / background image --- #
 
@@ -116,7 +111,7 @@ footer-link-col: "#404040"
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: "UA-178405186-1"
+#google_analytics: ""
 
 # Google Tag Manager ID
 #gtm: ""
@@ -129,13 +124,10 @@ footer-link-col: "#404040"
 #  uri: "demo.wiki.pro"
 #  opt-out: true
 
-# GoatCounter
-# goat_counter: "thecesrom-dev"
-
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "thecesrom-dev"
+#disqus: ""
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -179,7 +171,7 @@ timezone: "America/Tijuana"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
-paginate: 7
+paginate: 5
 
 kramdown:
   input: GFM
@@ -193,26 +185,20 @@ defaults:
     values:
       layout: "post"
       comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
+      social-share: false # add social media sharing buttons to all blog posts
       readtime: true # add estimated reading time on all blog posts
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
-      show-avatar: true
 
 # Exclude these files from production site
 exclude:
   - CNAME
   - Gemfile
-  - LICENSE
   - README.md
 
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
-
