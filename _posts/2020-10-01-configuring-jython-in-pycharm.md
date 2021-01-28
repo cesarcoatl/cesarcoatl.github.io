@@ -4,7 +4,7 @@ title: Configuring Jython in PyCharm
 subtitle: How I struggled and eventually succeeded, so you don't have to
 tags: [guide, ignition, jython, macos, pycharm]
 date: 2020-10-01 19:02 -0700
-last-updated: 2021-01-28 13:22 -0800
+last-updated: 2021-01-28 14:25 -0800
 ---
 ## Table of Contents
 - [What is Jython?](#what-is-jython)
@@ -72,7 +72,14 @@ Do not install Jython 2.7.2 as it is not currently supported by PyCharm. See [PY
 
 Since I intend to set up Jython as a Project Interpreter in PyCharm, and considering the versions used by Ignition, I'll download the following:
 
-1. Java 11.0.7 (LTS) from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
+> Updated: {{ page.last-updated | date: site.date_format }}
+
+1. Java 11
+    1. Via [Homebrew](https://brew.sh/){:target="_blank"}.
+    ```bash
+    $ brew install --cask zulu11
+    ```
+    1. Or from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
 1. Jython 2.7.1
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}. Just tap [coatl-dev's Homebrew tap](https://github.com/coatl-dev/homebrew-coatl-dev/){:target="_blank"}, and install `jython@2.7.1`:
     ```bash
@@ -85,36 +92,40 @@ Since I intend to set up Jython as a Project Interpreter in PyCharm, and conside
     ```
     1. Or by downloading the installer [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
 
-Once Java has been installed, we run the following:
+I decided to install both using `brew`.
 
+First `zulu11`:
 ```bash
-$ java -version
-openjdk version "11.0.7" 2020-04-14 LTS
-OpenJDK Runtime Environment Zulu11.39+15-CA (build 11.0.7+10-LTS)
-OpenJDK 64-Bit Server VM Zulu11.39+15-CA (build 11.0.7+10-LTS, mixed mode)
-$ java -jar ~/Downloads/jython-installer-2.7.1.jar
+$ brew install --cask zulu11
+==> Downloading https://cdn.azul.com/zulu/bin/zulu11.45.27-ca-jdk11.0.10-macosx_x64.dmg
+######################################################################## 100.0%
+==> Installing Cask zulu11
+==> Running installer for zulu11; your password may be necessary.
+Package installers may write to any location; options such as `--appdir` are ignored.
+Password:
+installer: Package name is Zulu 11.45+27
+installer: Upgrading at base path /
+installer: The upgrade was successful.
+🍺  zulu11 was successfully installed!
 ```
 
-I decided to install it on the default location `~/jython2.7.1`, and then created a symlink.
-
-{: .box-note}
-I do not need `sudo` when creating the symlink at `/usr/local/bin`; Homebrew already took care of that.
-
+Then `jython@2.7.1`:
 ```bash
-$ cd ~/jython2.7.1/bin
-$ chmod +x jython
-$ cd /usr/local/bin
-$ ln -s ~/jython2.7.1/bin/jython jython
+$ brew install coatl-dev/coatl-dev/jython@2.7.1
+==> Installing jython@2.7.1 from coatl-dev/coatl-dev
+==> Downloading https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.1/jython-installer-2.7.1
+==> Downloading from https://repo1.maven.org/maven2/org/python/jython-installer/2.7.1/jython-installer-2.7.1.jar
+######################################################################## 100.0%
+==> java -jar /Users/thecesrom/Library/Caches/Homebrew/downloads/558a886fedd7c18b1e12419bd4ab398b3ad7aaa902df4f5686ef3b695b89f2b9--jython-installer-2.7.1.jar
+🍺  /usr/local/Cellar/jython@2.7.1/2.7.1: 3,785 files, 148.7MB, built in 1 minute 22 seconds
 ```
-
-And now I can run `jython` anywhere.
 
 **NOTE:** There is a warning when running `jython` with Java 11, but everything works fine.
 
 ```bash
 $ jython
 WARNING: An illegal reflective access operation has occurred
-WARNING: Illegal reflective access by org.python.core.PySystemState (file:/Users/thecesrom/jython2.7.1/jython.jar) to method java.io.Console.encoding()
+Illegal reflective access by org.python.core.PySystemState (file:/usr/local/Cellar/jython@2.7.1/2.7.1/libexec/jython.jar) to method java.io.Console.encoding()
 WARNING: Please consider reporting this to the maintainers of org.python.core.PySystemState
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
