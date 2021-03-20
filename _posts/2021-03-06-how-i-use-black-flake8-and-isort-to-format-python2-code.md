@@ -143,7 +143,7 @@ isort....................................................................Passed
 black....................................................................Passed
 ```
 
-So every time you try to commit something to your Git repo, all tests whould be marked as `Passed`, otherwise the commit will fail.
+So every time you try to commit something to your Git repo, all tests should be marked as `Passed`, otherwise the commit will fail.
 
 ## Bonus
 
