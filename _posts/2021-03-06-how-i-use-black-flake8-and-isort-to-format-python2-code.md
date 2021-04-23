@@ -55,7 +55,7 @@ So let's explain each option used.
 - `--max-doc-length`: Maximum allowed doc line length for the entirety of this run. (Default: None)
 - `--ignore`: Comma-separated list of errors and warnings to ignore (or skip). For example, ``--ignore=E4,E51,W234``. (Default: ['E226', 'E123', 'W504', 'E121', 'W503', 'E126', 'E704', 'E24'])
 
-In my case I am using `72` as the maximum allowed charecters for my docstrings, in accordance to PEP 8, and ignoring the following errors:
+In my case I am using `72` as the maximum allowed characters for my docstrings, in accordance to PEP 8, and ignoring the following errors:
 
 - `E211`: whitespace before ‘(‘
     - Since in Python 2 `print` is not a function, `black` adds a space between the `print` statement from Python 2, and the openning parenthesis
