@@ -68,7 +68,7 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path
 
 Restart shell
 ```bash
-$ exec "$SHELL"
+exec "$SHELL"
 ```
 
 Next, I'll install specific Python versions.
@@ -90,7 +90,7 @@ pyenv install --list | grep " 3\.9"
 Installing the latest 3.9 release.
 
 ```bash
-$ pyenv install 3.9.5
+pyenv install 3.9.5
 ```
 
 ### Installing Python 2.7
@@ -148,13 +148,13 @@ pyenv versions
 Run `pyenv global <version>` to set the global version of Python to be used in all shells.
 
 ```bash
-$ pyenv global 3.9.5
+pyenv global 3.9.5
 ```
 
 Verify your selection by running `pyenv versions`.
 
 ```bash
-$ pyenv versions
+pyenv versions
   system
   2.7.18
 * 3.9.5 (set by /Users/thecesrom/.pyenv/version)

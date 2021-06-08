@@ -64,7 +64,7 @@ And this week I've had my first PR approved for a `cask`. After doing my homewor
 So, starting now you can run the following command:
 
 ```bash
-$ brew install azure-data-studio-insiders
+brew install azure-data-studio-insiders
 ```
 
 Azure Data Studio - Insiders will be installed on your machine, and, even better, when you choose the `sqlCreateStoredProc` snippet you'll get the following template:
