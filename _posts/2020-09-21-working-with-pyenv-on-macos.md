@@ -9,7 +9,7 @@ tags:
 - python
 - tutorial
 date: 2020-09-21 13:02 -0700
-last-updated: 2020-11-08 21:04 -0800
+last-updated: 2021-06-07 20:49 -0700
 ---
 ## Table of Contents
 - [Introduction](#introduction)
@@ -50,17 +50,20 @@ Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_
 
 Install dependencies
 ```bash
-$ brew install openssl readline sqlite3 xz zlib
+brew install openssl readline sqlite3 xz zlib
 ```
 
 Install pyenv
 ```bash
-$ brew install pyenv
+brew install pyenv
 ```
 
 Load `pyenv` automatically by running the following command to add it to your shell
+
+{: .box-note}
+Starting with `pyenv` [v2.0.0](https://github.com/pyenv/pyenv/releases/tag/v2.0.0){:target="_blank"} the `pyenv init` command has changed.
 ```bash
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
 ```
 
 Restart shell
@@ -74,27 +77,32 @@ Next, I'll install specific Python versions.
 
 First, let's get a list of all 3.9 versions:
 ```bash
-$ pyenv install --list | grep " 3\.9"
+pyenv install --list | grep " 3\.9"
   3.9.0
   3.9-dev
+  3.9.1
+  3.9.2
+  3.9.3
+  3.9.4
+  3.9.5
 ```
 
 Installing the latest 3.9 release.
 
 ```bash
-$ pyenv install 3.9.0
+$ pyenv install 3.9.5
 ```
 
 ### Installing Python 2.7
 
-{: .box-info}
+{: .box-note}
 For the [Ignition](https://github.com/thecesrom/Ignition/){:target="_blank"} project I maintain, both Python 2.7.18 or Jython 2.7.1 are required.
 
 So, first, I will install Python 2.7.18.
 
 
 ```bash
-$ pyenv install --list | grep " 2\.7"
+pyenv install --list | grep " 2\.7"
   2.7.0
   2.7-dev
   2.7.1
@@ -123,7 +131,7 @@ Python 2.7 reached its EOL on January 1, 2020. See: [Sunsetting Python 2](https:
 Installing the final 2.7 version:
 
 ```bash
-$ pyenv install 2.7.18
+pyenv install 2.7.18
 ```
 
 ### Setting a global version of Python
@@ -131,16 +139,16 @@ $ pyenv install 2.7.18
 Run `pyenv versions` to list all Python versions known to pyenv; an asterisk will be shown next to the currently active version.
 
 ```bash
-$ pyenv versions
+pyenv versions
 * system (set by /Users/thecesrom/.pyenv/version)
   2.7.18
-  3.9.0
+  3.9.5
 ```
 
 Run `pyenv global <version>` to set the global version of Python to be used in all shells.
 
 ```bash
-$ pyenv global 3.9.0
+$ pyenv global 3.9.5
 ```
 
 Verify your selection by running `pyenv versions`.
@@ -149,7 +157,7 @@ Verify your selection by running `pyenv versions`.
 $ pyenv versions
   system
   2.7.18
-* 3.9.0 (set by /Users/thecesrom/.pyenv/version)
+* 3.9.5 (set by /Users/thecesrom/.pyenv/version)
 ```
 
 Alternatively, you could [specify multiple versions as global at once](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global-advanced){:target="_blank"}.
