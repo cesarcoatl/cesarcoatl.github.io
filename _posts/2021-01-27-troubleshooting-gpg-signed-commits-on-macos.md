@@ -21,7 +21,7 @@ But yesterday a user's commit `Verified` label caught my attention, so I decided
 At the [Signing commits](https://docs.github.com/en/github/authenticating-to-github/signing-commits) step I was about to sign my first commit but then tragedy struck.
 
 ```bash
-git commit -S -m "First signed commit"
+$ git commit -S -m "First signed commit"
 error: gpg failed to sign the data
 fatal: failed to write commit object
 ```
@@ -29,7 +29,7 @@ fatal: failed to write commit object
 I was not sure what was going, so I retraced my steps, and I even found [some](https://github.com/pstadler/keybase-gpg-github#troubleshooting-gpg-failed-to-sign-the-data) [possible](https://stackoverflow.com/a/41054093) solutions, but none of them worked. And I even deleted my keys, and started again but then, similar to this [user's symptoms](https://unix.stackexchange.com/questions/571597/gpg-key-gen-fails-no-such-file-or-directory), I got the following:
 
 ```bash
-gpg --full-generate-key
+$ gpg --full-generate-key
 ...
 gpg: agent_genkey failed: No such file or directory
 Key generation failed: No such file or directory
@@ -38,7 +38,7 @@ Key generation failed: No such file or directory
 What is this? Let's see what `$GPG_TTY` has to say:
 
 ```bash
-echo $GPG_TTY
+$ echo $GPG_TTY
 not a tty
 ```
 
@@ -60,23 +60,23 @@ But all of the guides that I found did not take into account my current setup; I
 So there it was. Instead of `GPG_TTY=$(tty)` somewhere in my `.zshrc`, all I needed was `GPG_TTY=$TTY`.
 
 ```bash
-exec "$SHELL"
-echo $GPG_TTY
+$ exec "$SHELL"
+$ echo $GPG_TTY
 /dev/ttys000
 ```
 
 And ever since, all my commits are signed by updating my `git` settings:
 
 ```bash
-git config --global user.signiningkey XXXXXXXXXXXXXXXX
-git config --global commit.gpgsign true
+$ git config --global user.signiningkey XXXXXXXXXXXXXXXX
+$ git config --global commit.gpgsign true
 ```
 
 And after installing `pinentry-mac`, I don't have to enter my passphrase every single time.
 
 ```bash
-echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
-killall gpg-agent
+$ echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
+$ killall gpg-agent
 ```
 
 And done!

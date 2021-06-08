@@ -25,7 +25,7 @@ With `black` you can format Python code from 2.7 all the way to 3.8 (as of versi
 My preference is using [PEP 8](https://www.python.org/dev/peps/pep-0008/){:target="_blank"} as my style guide, and so, 79-characters per line of code is what I use. So it's as simple as running the following code at the root of my project and all non-compliant files will be reformatted:
 
 ```bash
-black --line-length 79 --target-version py27 . 
+$ black --line-length 79 --target-version py27 . 
 ```
 
 Let's explain each option.
@@ -45,7 +45,7 @@ Anthony Sottile ([@asottile](https://gitlab.com/asottile){:target="_blank"}) has
 Fortunately I can still use it for Python 2 by running the following command:
 
 ```bash
-flake8 --max-doc-length=72 --ignore=E211,E999,F401,F821,W503
+$ flake8 --max-doc-length=72 --ignore=E211,E999,F401,F821,W503
 ```
 
 [PEP 8](https://www.python.org/dev/peps/pep-0008/){:target="_blank"} recommends limiting docstrings or comments to 72 characters, which is exactly what I'm using for flake8.
@@ -77,7 +77,7 @@ And just as their slogan states: "isort your imports, so you don't have to."
 Command:
 
 ```bash
-isort --multi-line 3 --profile black --python-version 27 .
+$ isort --multi-line 3 --profile black --python-version 27 .
 ```
 
 The options used are mainly to be compatible with `black` (see [here](https://pycqa.github.io/isort/docs/configuration/black_compatibility/){:target="_blank"}):
@@ -135,9 +135,9 @@ repos:
 After you've configured all of this for the first time, first run the `install` command for `pre-commit` and to run tests I use `run` with the `--all-files` option, just like this:
 
 ```bash
-pre-commit install
+$ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
-pre-commit run --all-files
+$ pre-commit run --all-files
 flake8...................................................................Passed
 isort....................................................................Passed
 black....................................................................Passed
@@ -149,12 +149,12 @@ So every time you try to commit something to your Git repo, all tests should be 
 
 At the moment of writing this post both `black` and `isort` do support the use of `pyproject.toml`, something that `flake8` still hasn't implemented unlike [`flake9`](https://pypi.org/project/flake9/){:target="_blank"} or [FlakeHell](https://flakehell.readthedocs.io/){:target="_blank"}, which I have not integrated into my workflow; I'm still using `flake8` because I've installed it via Homebrew.
 
-While you have the option to install all of these tools via `pip3`, currently I decided to use Homebrew because I don't usually check if my packages are outdated, something that Homebrew contributors actually do with each new release. See: [`black`](https://formulae.brew.sh/formula/black){:target="_blank"}, [`flake8`](https://formulae.brew.sh/formula/flake8){:target="_blank"}, and [`isort`](https://formulae.brew.sh/formula/flake8){:target="_blank"}, which will install [`python@3.9`](https://formulae.brew.sh/formula/python@3.9){:target="_blank"} as they all depend on it.
+While you have the option to "`pip`-install" all of these tools, currently I decided to use Homebrew because I don't usually check if my packages are outdated, something that Homebrew contributors actually do with each new release. See: [`black`](https://formulae.brew.sh/formula/black){:target="_blank"}, [`flake8`](https://formulae.brew.sh/formula/flake8){:target="_blank"}, and [`isort`](https://formulae.brew.sh/formula/flake8){:target="_blank"}, which will install [`python@3.9`](https://formulae.brew.sh/formula/python@3.9){:target="_blank"} as they all depend on it.
 
-But if you do use `pip3`, I recommend adding an alias for updating all of your outdated packages that should run the following command:
+But if you do use `pip`, I recommend adding an alias for updating all of your outdated packages that should run the following command:
 
 ```bash
-pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+$ python -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python -m pip install --upgrade
 ```
 
 ## Other useful `pip` packages

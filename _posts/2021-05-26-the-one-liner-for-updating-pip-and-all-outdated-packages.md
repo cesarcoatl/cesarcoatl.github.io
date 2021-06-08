@@ -24,13 +24,13 @@ Here are the top results provided by the most common search engines:
 And all of them agree on a command like this on Linux, macOS, or Git Bash for Windows:
 
 ```bash
-pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
+$ pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
 ```
 
 And for PowerShell:
 
 ```powershell
-pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+> pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
 ```
 
 And I agree that both work fine, but I wondered what would happen when `pip` itself was outdated and had to be upgraded.
@@ -41,25 +41,25 @@ As for the recommended command to install or upgrade packages, I found that pip 
 
 To [install](https://pip.pypa.io/en/stable/cli/pip_install/){:target="_blank"} a package:
 ```bash
-python -m pip install black
+$ python -m pip install black
 ```
 
 And for [upgrading](https://pip.pypa.io/en/stable/installing/#upgrading-pip){:target="_blank"} a package:
 ```bash
-python -m pip install --upgrade pip
+$ python -m pip install --upgrade pip
 ```
 
 So, considering all of the above, this is what I ended up using:
 
 macOS:
 ```bash
-python -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python -m pip install --upgrade
+$ python -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python -m pip install --upgrade
 ```
 
 Windows:
 
 ```powershell
-python -m pip list --outdated --format=freeze | %{$_.split('==')[0]} | %{python -m pip install --upgrade $_}
+> python -m pip list --outdated --format=freeze | %{$_.split('==')[0]} | %{python -m pip install --upgrade $_}
 ```
 
 But of course I don't type those commands each and every time I am curious about checking for upgrades, so I recommend creating an alias on macOS, and a function on Windows PowerShell.

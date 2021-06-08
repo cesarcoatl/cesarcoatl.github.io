@@ -77,18 +77,18 @@ Since I intend to set up Jython as a Project Interpreter in PyCharm, and conside
 1. Java 11
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}.
     ```bash
-    brew install --cask zulu11
+    $ brew install --cask zulu11
     ```
     1. Or from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
 1. Jython 2.7.1
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}. Just tap [coatl-dev's Homebrew tap](https://github.com/coatl-dev/homebrew-coatl-dev/){:target="_blank"}, and install `jython@2.7.1`:
     ```bash
-    brew install coatl-dev/coatl-dev/jython@2.7.1
+    $ brew install coatl-dev/coatl-dev/jython@2.7.1
     ```
     Or
     ```bash
-    brew tap coatl-dev/coatl-dev
-    brew install jython@2.7.1
+    $ brew tap coatl-dev/coatl-dev
+    $ brew install jython@2.7.1
     ```
     1. Or by downloading the installer [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
 
@@ -96,7 +96,7 @@ I decided to install both using `brew`.
 
 First `zulu11`:
 ```bash
-brew install --cask zulu11
+$ brew install --cask zulu11
 ==> Downloading https://cdn.azul.com/zulu/bin/zulu11.45.27-ca-jdk11.0.10-macosx_x64.dmg
 ######################################################################## 100.0%
 ==> Installing Cask zulu11
@@ -111,7 +111,7 @@ installer: The upgrade was successful.
 
 Then `jython@2.7.1`:
 ```bash
-brew install coatl-dev/coatl-dev/jython@2.7.1
+$ brew install coatl-dev/coatl-dev/jython@2.7.1
 ==> Installing jython@2.7.1 from coatl-dev/coatl-dev
 ==> Downloading https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.1/jython-installer-2.7.1
 ==> Downloading from https://repo1.maven.org/maven2/org/python/jython-installer/2.7.1/jython-installer-2.7.1.jar
@@ -123,7 +123,7 @@ brew install coatl-dev/coatl-dev/jython@2.7.1
 **NOTE:** There is a warning when running `jython` with Java 11, but everything works fine.
 
 ```bash
-jython
+$ jython
 WARNING: An illegal reflective access operation has occurred
 Illegal reflective access by org.python.core.PySystemState (file:/usr/local/Cellar/jython@2.7.1/2.7.1/libexec/jython.jar) to method java.io.Console.encoding()
 WARNING: Please consider reporting this to the maintainers of org.python.core.PySystemState
@@ -136,7 +136,7 @@ Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43)
 To circumvent this, you must run Jython with the following flags:
 
 ```bash
-jython -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED 
+$ jython -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED 
 Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43) 
 [OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.7
 Type "help", "copyright", "credits" or "license" for more information.
@@ -172,7 +172,7 @@ Thu Oct 01 19:01:27 PDT 2020
 
 And just like the example in [Jython within Ignition](#jython-within-ignition), I get the same pop-up by running the following code:
 
-```bash
+```python
 >>> import system.gui
 >>> system.gui.warningBox('This one is a warning.')
 ```

@@ -31,7 +31,7 @@ Xcode Command Line Tools ([link](https://developer.apple.com/download/more/?=xco
 
 Homebrew
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 Let's begin.
@@ -50,12 +50,12 @@ Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_
 
 Install dependencies
 ```bash
-brew install openssl readline sqlite3 xz zlib
+$ brew install openssl readline sqlite3 xz zlib
 ```
 
 Install pyenv
 ```bash
-brew install pyenv
+$ brew install pyenv
 ```
 
 Load `pyenv` automatically by running the following command to add it to your shell
@@ -63,12 +63,12 @@ Load `pyenv` automatically by running the following command to add it to your sh
 {: .box-note}
 Starting with `pyenv` [v2.0.0](https://github.com/pyenv/pyenv/releases/tag/v2.0.0){:target="_blank"} the `pyenv init` command has changed.
 ```bash
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
 ```
 
 Restart shell
 ```bash
-exec "$SHELL"
+$ exec "$SHELL"
 ```
 
 Next, I'll install specific Python versions.
@@ -77,7 +77,7 @@ Next, I'll install specific Python versions.
 
 First, let's get a list of all 3.9 versions:
 ```bash
-pyenv install --list | grep " 3\.9"
+$ pyenv install --list | grep " 3\.9"
   3.9.0
   3.9-dev
   3.9.1
@@ -90,7 +90,7 @@ pyenv install --list | grep " 3\.9"
 Installing the latest 3.9 release.
 
 ```bash
-pyenv install 3.9.5
+$ pyenv install 3.9.5
 ```
 
 ### Installing Python 2.7
@@ -102,7 +102,7 @@ So, first, I will install Python 2.7.18.
 
 
 ```bash
-pyenv install --list | grep " 2\.7"
+$ pyenv install --list | grep " 2\.7"
   2.7.0
   2.7-dev
   2.7.1
@@ -131,7 +131,7 @@ Python 2.7 reached its EOL on January 1, 2020. See: [Sunsetting Python 2](https:
 Installing the final 2.7 version:
 
 ```bash
-pyenv install 2.7.18
+$ pyenv install 2.7.18
 ```
 
 ### Setting a global version of Python
@@ -139,7 +139,7 @@ pyenv install 2.7.18
 Run `pyenv versions` to list all Python versions known to pyenv; an asterisk will be shown next to the currently active version.
 
 ```bash
-pyenv versions
+$ pyenv versions
 * system (set by /Users/thecesrom/.pyenv/version)
   2.7.18
   3.9.5
@@ -148,13 +148,13 @@ pyenv versions
 Run `pyenv global <version>` to set the global version of Python to be used in all shells.
 
 ```bash
-pyenv global 3.9.5
+$ pyenv global 3.9.5
 ```
 
 Verify your selection by running `pyenv versions`.
 
 ```bash
-pyenv versions
+$ pyenv versions
   system
   2.7.18
 * 3.9.5 (set by /Users/thecesrom/.pyenv/version)
