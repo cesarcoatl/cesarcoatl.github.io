@@ -70,6 +70,6 @@ Also notice that on the `hooks` for `pydocstyle` on my `.pre-commit-config.yaml`
 
 So now I use `black`, `isort`, `flake8`, and `pydocstyle`, in that order as recommended by Anthony Sottile himself [here](https://www.pythonpodcast.com/flake8-static-analysis-episode-309/){:target="_blank"}, all enforced using `pre-commit`.
 
-Lastly, if you can, please consider supporting Anthony Sottile via [GitHub Sponsors](https://github.com/sponsors/asottile) to show you appreciation.
+Lastly, if you can, please consider supporting Anthony Sottile via [GitHub Sponsors](https://github.com/sponsors/asottile) to show your appreciation.
 
 Thanks for reading!
