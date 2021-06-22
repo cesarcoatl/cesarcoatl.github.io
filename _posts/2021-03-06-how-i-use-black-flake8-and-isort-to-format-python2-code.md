@@ -55,7 +55,7 @@ The options used are mainly to be compatible with `black` (see [here](https://py
 - `--python-version`: Tells isort to set the known standard library based on the specified Python version. Default is to assume any Python 3 version could be the target, and use a union of all stdlib modules across versions. If auto is specified, the version of the interpreter used to run isort (currently: 39) will be used.
     - `27` for Python 2.7
 
-But there's still something missing. `black` does not care about comments or [docstrings](https://www.python.org/dev/peps/pep-0257/){:target="_blank"}, and `isort` does not touch, for obvious reasons; enter `flake8`.
+But there's still something missing. `black` does not care about comments or [docstrings](https://www.python.org/dev/peps/pep-0257/){:target="_blank"}, and `isort` cares even less, for obvious reasons; enter `flake8`.
 
 ### flake8
 > flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
