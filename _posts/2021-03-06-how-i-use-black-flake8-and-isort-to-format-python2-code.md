@@ -8,10 +8,11 @@ tags:
 - pip
 - python
 date: 2021-03-06 18:35 -0800
+last-updated: 2021-06-21 19:28 -0700
 ---
 Welcome to part 2 of my series on how code formatters can assist in producing easy-to-read code, and hopefully easy to maintain too.
 
-On this installment I will discuss how I use tools like [black](#black), [flake8](#flake8), [isort](#isort), and how to put it all together using [pre-commit](#pre-commit).
+On this installment I will discuss how I use tools like [black](#black), [isort](#isort), [flake8](#flake8), and how to put it all together using [pre-commit](#pre-commit).
 
 In, what is now, [part 1]({{ site.url }}/2020/12/22/79-characters) I  mentioned that due to some work-related projects I still write Python 2 code, but as everyone is dropping support for Python 2, I have decided to use Python 3 tools to format my code.
 
@@ -35,7 +36,26 @@ Let's explain each option.
 
 Fairly simple. Allow `79` characters per line, and use `py27` as the targetted version.
 
-But there's still something missing. Black does not care about comments or [docstrings](https://www.python.org/dev/peps/pep-0257/){:target="_blank"}. Enter `flake8`.
+### isort
+> A Python utility / library to sort imports. 
+
+And just as their slogan states: "isort your imports, so you don't have to."
+
+Command:
+
+```bash
+$ isort --multi-line 3 --profile black --python-version 27 .
+```
+
+The options used are mainly to be compatible with `black` (see [here](https://pycqa.github.io/isort/docs/configuration/black_compatibility/){:target="_blank"}):
+- `--multi-line`: Multi line output (0-grid, 1-vertical, 2-hanging, 3-vert-hanging, 4-vert-grid, 5-vert-grid-grouped, 6-vert-grid-grouped-no-comma, 7-noqa, 8-vertical-hanging-indent-bracket, 9-vertical-prefix-from-module-import, 10-hanging-indent-with-parentheses).
+    - `3-vert-hanging`
+- `--profile`: Base profile type to use for configuration. Profiles include: black, django, pycharm, google, open_stack, plone, attrs, hug. As well as any shared profiles.
+    - `black`
+- `--python-version`: Tells isort to set the known standard library based on the specified Python version. Default is to assume any Python 3 version could be the target, and use a union of all stdlib modules across versions. If auto is specified, the version of the interpreter used to run isort (currently: 39) will be used.
+    - `27` for Python 2.7
+
+But there's still something missing. `black` does not care about comments or [docstrings](https://www.python.org/dev/peps/pep-0257/){:target="_blank"}, and `isort` does not touch, for obvious reasons; enter `flake8`.
 
 ### flake8
 > flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
@@ -68,26 +88,6 @@ In my case I am using `72` as the maximum allowed characters for my docstrings, 
 - `W503`: line break before binary operator
     - It doesn't like when binary operators are broken into multi-line statements
 
-
-### isort
-> A Python utility / library to sort imports. 
-
-And just as their slogan states: "isort your imports, so you don't have to."
-
-Command:
-
-```bash
-$ isort --multi-line 3 --profile black --python-version 27 .
-```
-
-The options used are mainly to be compatible with `black` (see [here](https://pycqa.github.io/isort/docs/configuration/black_compatibility/){:target="_blank"}):
-- `--multi-line`: Multi line output (0-grid, 1-vertical, 2-hanging, 3-vert-hanging, 4-vert-grid, 5-vert-grid-grouped, 6-vert-grid-grouped-no-comma, 7-noqa, 8-vertical-hanging-indent-bracket, 9-vertical-prefix-from-module-import, 10-hanging-indent-with-parentheses).
-    - `3-vert-hanging`
-- `--profile`: Base profile type to use for configuration. Profiles include: black, django, pycharm, google, open_stack, plone, attrs, hug. As well as any shared profiles.
-    - `black`
-- `--python-version`: Tells isort to set the known standard library based on the specified Python version. Default is to assume any Python 3 version could be the target, and use a union of all stdlib modules across versions. If auto is specified, the version of the interpreter used to run isort (currently: 39) will be used.
-    - `27` for Python 2.7
-
 ### pre-commit
 > A framework for managing and maintaining multi-language pre-commit hooks.
 
@@ -118,18 +118,18 @@ And finally my `.pre-commit-config.yaml` file:
 
 ```yml
 repos:
-  - repo: https://github.com/PyCQA/flake8
-    rev: 3.8.4
-    hooks:
-      - id: flake8
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.7.0
-    hooks:
-      - id: isort
   - repo: https://github.com/psf/black
     rev: 20.8b1
     hooks:
       - id: black
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.7.0
+    hooks:
+      - id: isort
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.8.4
+    hooks:
+      - id: flake8
 ```
 
 After you've configured all of this for the first time, first run the `install` command for `pre-commit` and to run tests I use `run` with the `--all-files` option, just like this:
@@ -138,9 +138,9 @@ After you've configured all of this for the first time, first run the `install` 
 $ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
-flake8...................................................................Passed
-isort....................................................................Passed
 black....................................................................Passed
+isort....................................................................Passed
+flake8...................................................................Passed
 ```
 
 So every time you try to commit something to your Git repo, all tests should be marked as `Passed`, otherwise the commit will fail.
