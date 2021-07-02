@@ -10,6 +10,7 @@ tags:
 - tutorial
 - macos
 date: 2021-06-28 13:10 -0700
+last-updated: 2021-07-01 20:07 -0700
 ---
 Hello, friends!
 
@@ -40,12 +41,16 @@ So here I will share a quick guide on how I accomplished that.
     {: .box-note}
     I chose `/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9` instead of `/usr/local/Cellar/python@3.9/3.9.5` because I wanted to include the same folders (`bin`, `include`, `lib`, `share`) as my other Python installation (`2.7.18`), which I installed via `pyenv`.
 
-1. Create `symlinks` for `idle`, `python` and `wheel` at the following location:
+1. Create `symlinks` for `idle`, `pip`, `python` and `wheel` at the following location:
 
     ```bash
     $ cd /usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/bin
     $ ln -sfv idle3.9 idle
     idle -> idle3.9
+    $ ln -sfv /usr/local/Cellar/python@3.9/3.9.5/bin/pip3 pip 
+    pip -> /usr/local/Cellar/python@3.9/3.9.5/bin/pip3
+    $ ln -sfv /usr/local/Cellar/python@3.9/3.9.5/bin/pip3 pip3
+    pip3 -> /usr/local/Cellar/python@3.9/3.9.5/bin/pip3
     $ ln -sfv python3 python
     python -> python3
     $ ln -sfv /usr/local/Cellar/python@3.9/3.9.5/bin/wheel3 wheel
