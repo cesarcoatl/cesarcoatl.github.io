@@ -11,7 +11,6 @@ This release is for Ignition [8.1.4](#814httpsgithubcomthecesromignitionreleases
 
 ## [8.1.4](https://github.com/thecesrom/Ignition/releases/tag/v8.1.4){:target="_blank"}
 
-
 Repository: [thecesrom/Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} · Tag: [v8.1.4](https://github.com/thecesrom/Ignition/releases/tag/v8.1.4){:target="_blank"} · Commit: [b4c6cb7](https://github.com/thecesrom/Ignition/commit/b4c6cb72f688754d712fbb5955bcacd3c02a4a86){:target="_blank"} · Released by: [thecesrom](https://github.com/thecesrom){:target="_blank"}
 
 ### Added
@@ -29,7 +28,6 @@ This release has 3 assets:
 Visit the [release page](https://github.com/thecesrom/Ignition/releases/tag/v8.1.4){:target="_blank"} to download them.
 
 ## [8.1.4-jython](https://github.com/thecesrom/Ignition/releases/tag/v8.1.4-jython){:target="_blank"}
-
 
 Repository: [thecesrom/Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} · Tag: [v8.1.4-jython](https://github.com/thecesrom/Ignition/releases/tag/v8.1.4-jython){:target="_blank"} · Commit: [2632b83](https://github.com/thecesrom/Ignition/commit/2632b83f78af7b69dd867371607f34d61e23accb){:target="_blank"} · Released by: [thecesrom](https://github.com/thecesrom){:target="_blank"}
 

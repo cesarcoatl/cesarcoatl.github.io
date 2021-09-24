@@ -28,23 +28,25 @@ So there were a couple of solutions.
 And it looks like this.
 
 Lines 175-178:
+
 ```json
-			"AS",
-			"\t-- body of the stored procedure",
-			"\tSELECT @param1, @param2",
-			"GO",
+   "AS",
+   "\t-- body of the stored procedure",
+   "\tSELECT @param1, @param2",
+   "GO",
 ```
 
 My solution is to surround those lines with `BEGIN` and `END`, like this:
 
 Lines 175-180:
+
 ```json
-			"AS",
-			"BEGIN",
-			"\t-- body of the stored procedure",
-			"\tSELECT @param1, @param2",
-			"END",
-			"GO",
+   "AS",
+   "BEGIN",
+   "\t-- body of the stored procedure",
+   "\tSELECT @param1, @param2",
+   "END",
+   "GO",
 ```
 
 The problem with this approach is that every time Azure Data Studio gets updated, the `mssql.json` file is replaced and must be re-edited.
@@ -64,7 +66,7 @@ And this week I've had my first PR approved for a `cask`. After doing my homewor
 So, starting now you can run the following command:
 
 ```bash
-$ brew install azure-data-studio-insiders
+brew install azure-data-studio-insiders
 ```
 
 Azure Data Studio - Insiders will be installed on your machine, and, even better, when you choose the `sqlCreateStoredProc` snippet you'll get the following template:

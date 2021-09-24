@@ -7,6 +7,7 @@ date: 2020-10-01 19:02 -0700
 last-updated: 2021-01-28 15:03 -0800
 ---
 ## Table of Contents
+
 - [What is Jython?](#what-is-jython)
 - [Why do I use Jython?](#why-do-i-use-jython)
 - [Jython within Ignition](#jython-within-ignition)
@@ -76,25 +77,32 @@ Since I intend to set up Jython as a Project Interpreter in PyCharm, and conside
 
 1. Java 11
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}.
+
     ```bash
-    $ brew install --cask zulu11
+    brew install --cask zulu11
     ```
+
     1. Or from Azul for macOS ([.zip](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.zip){:target="_blank"}, [.dmg](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.dmg){:target="_blank"}, [.tar.gz](https://cdn.azul.com/zulu/bin/zulu11.39.15-ca-jdk11.0.7-macosx_x64.tar.gz){:target="_blank"}).
 1. Jython 2.7.1
     1. Via [Homebrew](https://brew.sh/){:target="_blank"}. Just tap [coatl-dev's Homebrew tap](https://github.com/coatl-dev/homebrew-coatl-dev/){:target="_blank"}, and install `jython@2.7.1`:
+
     ```bash
-    $ brew install coatl-dev/coatl-dev/jython@2.7.1
+    brew install coatl-dev/coatl-dev/jython@2.7.1
     ```
+
     Or
+
     ```bash
-    $ brew tap coatl-dev/coatl-dev
-    $ brew install jython@2.7.1
+    brew tap coatl-dev/coatl-dev
+    brew install jython@2.7.1
     ```
+
     1. Or by downloading the installer [Jython Installer v2.7.1](https://search.maven.org/artifact/org.python/jython-installer/2.7.1/jar){:target="_blank"}
 
 I decided to install both using `brew`.
 
 First `zulu11`:
+
 ```bash
 $ brew install --cask zulu11
 ==> Downloading https://cdn.azul.com/zulu/bin/zulu11.45.27-ca-jdk11.0.10-macosx_x64.dmg
@@ -110,6 +118,7 @@ installer: The upgrade was successful.
 ```
 
 Then `jython@2.7.1`:
+
 ```bash
 $ brew install coatl-dev/coatl-dev/jython@2.7.1
 ==> Installing jython@2.7.1 from coatl-dev/coatl-dev
@@ -129,18 +138,18 @@ Illegal reflective access by org.python.core.PySystemState (file:/usr/local/Cell
 WARNING: Please consider reporting this to the maintainers of org.python.core.PySystemState
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
-Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43) 
+Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43)
 [OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.7
 ```
 
 To circumvent this, you must run Jython with the following flags:
 
 ```bash
-$ jython -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED 
-Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43) 
+$ jython -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED
+Jython 2.7.1 (default:0df7adb1b397, Jun 30 2017, 19:02:43)
 [OpenJDK 64-Bit Server VM (Azul Systems, Inc.)] on java11.0.7
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 ### Configuring Jython in PyCharm
@@ -153,8 +162,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 1. Select **/usr/local/bin/jython** from the **Interpreter** list, and click **OK**
 1. PyCharm will name it **Jython 2.7** by default, but you can change it
 1. Finally go to **Preferences > Build, Execution, Deployment > Console > Python Console** and add the following flags as **Interpreter options**
-    ```
-    -J--add-opens=java.base/java.io=ALL-UNNAMED -J--add-opens=java.base/java.lang=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED
+
+    ```properties
+    -J--add-opens=java.base/java.io=ALL-UNNAMED
+    -J--add-opens=java.base/java.lang=ALL-UNNAMED
+    -J--add-opens=java.base/java.nio=ALL-UNNAMED
+    -J--add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+    -J--add-opens=java.desktop/sun.awt=ALL-UNNAMED
+    -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED
     ```
 
 To test it I will be using the [jython](https://github.com/thecesrom/Ignition/tree/jython){:target="_blank"} branch of my [Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} project.
@@ -186,5 +201,6 @@ And with that, my friends, you are all set.
 Thanks, for reading.
 
 ### Sources
+
 [^1]: Jython - [link](https://www.jython.org/){:target="_blank"}
 [^2]: Ignition User Manual 8.0 - [link](https://docs.inductiveautomation.com/display/DOC80/Scripting#Scripting-WhereIsScriptingUsed?){:target="_blank"}

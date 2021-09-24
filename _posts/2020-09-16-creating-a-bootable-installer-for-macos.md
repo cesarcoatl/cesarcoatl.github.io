@@ -19,9 +19,11 @@ And these are the instructions:
 
 1. Download [macOS Catalina](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12){:target="_blank"} from the Mac App Store
 1. Once downloaded run the following command:
+
     ```bash
-    $ sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/INSTALLER
+    sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/INSTALLER
     ```
+
 1. Restart your Mac and press the alt-option key as soon as it restarts, so you are prompted to select a Startup Disk
 1. Select the **macOS Catalina Installer**
 1. Select **Disk Utility** and click **Continue**

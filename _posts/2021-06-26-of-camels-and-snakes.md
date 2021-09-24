@@ -10,6 +10,7 @@ date: 2021-06-26 23:06 -0700
 This article was originally meant to be posted before [pre-commit.ci and pydocstyle join the family]({{ site.url }}/2021/06/21/pre-commit-ci-and-pydocstyle-join-the-family/), but it has now become part 4 of the series of articles about [coding standards]({{ site.url }}/tags/#coding standards). And while the last three articles have revolved around Python, this article is meant to be a bit broader. So, without further ado, welcome to part 4.
 
 As the title suggests, I will discuss the following programming naming conventions:
+
 - [camelCase](#camelcase)
 - [snake_case](#snake_case)
 - [PascalCase](#PascalCase)
@@ -116,10 +117,12 @@ Lately, I've written code in Python and SQL more than anything else, so pardon m
 Thanks for reading!
 
 ### Other resources
+
 Bertrand, Aaron (2016-01-18). [Subjectivity: Naming Standards](https://www.sentryone.com/blog/aaronbertrand/subjectivity-naming-standards). SentryOne.
 Sarkuni, Sehrope (2014-02-16). [How I Write SQL, Part 1: Naming Conventions](https://launchbylunch.com/posts/2014/Feb/16/sql-naming-conventions/). Launch by Lunch.
 
 ### References
+
 [^1]: [Camel case](https://en.wikipedia.org/wiki/Camel_case). Wikipedia.
 [^2]: [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions). Microsoft Docs.
 [^3]: [Code Conventions for the Java Programming Language - Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html). Oracle.

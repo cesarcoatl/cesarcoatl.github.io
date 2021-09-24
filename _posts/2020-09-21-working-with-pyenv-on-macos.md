@@ -12,26 +12,30 @@ date: 2020-09-21 13:02 -0700
 last-updated: 2021-06-07 20:49 -0700
 ---
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
 - [Why pyenv?](#why-pyenv)
 - [Installing pyenv](#installing-pyenv)
-    - [Installing Python 3.9](#installing-python-39)
-    - [Installing Python 2.7](#installing-python-27)
-    - [Setting a global version of Python](#setting-a-global-version-of-python)
+  - [Installing Python 3.9](#installing-python-39)
+  - [Installing Python 2.7](#installing-python-27)
+  - [Setting a global version of Python](#setting-a-global-version-of-python)
 - [Success!](#success)
 - [Further reading](#further-reading)
 - [Sources](#sources)
 
 ## Introduction
+
 This is not meant to be a detailed guide on the many ways you could install Homebrew, and pyenv, but a look into what I did to get my environment set up for my personal projects.
 
 ## Pre-requisites
+
 Xcode Command Line Tools ([link](https://developer.apple.com/download/more/?=xcode){:target="_blank"})
 
 Homebrew
+
 ```bash
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 Let's begin.
@@ -49,26 +53,30 @@ Before [breathing new life into my MacBook Air]({{ page.previous.url | relative_
 ## Installing pyenv
 
 Install dependencies
+
 ```bash
-$ brew install openssl readline sqlite3 xz zlib
+brew install openssl readline sqlite3 xz zlib
 ```
 
 Install pyenv
+
 ```bash
-$ brew install pyenv
+brew install pyenv
 ```
 
 Load `pyenv` automatically by running the following command to add it to your shell
 
 {: .box-note}
 Starting with `pyenv` [v2.0.0](https://github.com/pyenv/pyenv/releases/tag/v2.0.0){:target="_blank"} the `pyenv init` command has changed.
+
 ```bash
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
 ```
 
 Restart shell
+
 ```bash
-$ exec "$SHELL"
+exec "$SHELL"
 ```
 
 Next, I'll install specific Python versions.
@@ -76,6 +84,7 @@ Next, I'll install specific Python versions.
 ### Installing Python 3.9
 
 First, let's get a list of all 3.9 versions:
+
 ```bash
 $ pyenv install --list | grep " 3\.9"
   3.9.0
@@ -90,7 +99,7 @@ $ pyenv install --list | grep " 3\.9"
 Installing the latest 3.9 release.
 
 ```bash
-$ pyenv install 3.9.5
+pyenv install 3.9.5
 ```
 
 ### Installing Python 2.7
@@ -99,7 +108,6 @@ $ pyenv install 3.9.5
 For the [Ignition](https://github.com/thecesrom/Ignition/){:target="_blank"} project I maintain, both Python 2.7.18 or Jython 2.7.1 are required.
 
 So, first, I will install Python 2.7.18.
-
 
 ```bash
 $ pyenv install --list | grep " 2\.7"
@@ -131,7 +139,7 @@ Python 2.7 reached its EOL on January 1, 2020. See: [Sunsetting Python 2](https:
 Installing the final 2.7 version:
 
 ```bash
-$ pyenv install 2.7.18
+pyenv install 2.7.18
 ```
 
 ### Setting a global version of Python
@@ -148,7 +156,7 @@ $ pyenv versions
 Run `pyenv global <version>` to set the global version of Python to be used in all shells.
 
 ```bash
-$ pyenv global 3.9.5
+pyenv global 3.9.5
 ```
 
 Verify your selection by running `pyenv versions`.
@@ -162,15 +170,17 @@ $ pyenv versions
 
 Alternatively, you could [specify multiple versions as global at once](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global-advanced){:target="_blank"}.
 
-## Success!
+## Success
 
 And by doing all of the above I have completed setting up my computer for working on my projects.
 
 Happy coding!
 
 ## Further reading
+
 1. pyenv :: Modern Python Developer's Toolkit - [https://pycon.switowski.com/02-packages/pyenv/](https://pycon.switowski.com/02-packages/pyenv/){:target="_blank"}
 
 ## Sources
+
 [^1]: pyenv/pyenv: Simple Python version management - [https://github.com/pyenv/pyenv](https://github.com/pyenv/pyenv){:target="_blank"}
 [^2]: Managing Multiple Python Versions With pyenv - [https://realpython.com/intro-to-pyenv/](https://realpython.com/intro-to-pyenv/){:target="_blank"}

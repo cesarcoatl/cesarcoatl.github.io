@@ -21,8 +21,8 @@ So here I will share a quick guide on how I accomplished that.
 1. If you've installed the latest Python `3.9` version via `pyenv`, uninstall it by running `uninstall` and then `rehash`
 
     ```bash
-    $ pyenv uninstall 3.9.X
-    $ pyenv rehash
+    pyenv uninstall 3.9.X
+    pyenv rehash
     ```
 
 1. Create a `symlink` at `~/.pyenv/versions`
@@ -79,7 +79,7 @@ So here I will share a quick guide on how I accomplished that.
 1. Once that's done, run `pyenv rehash` as recommended by `pyenv` whenever you install new versions
 
     ```bash
-    $ pyenv rehash
+    pyenv rehash
     ```
 
 1. Now, you're ready to verify all versions managed by `pyenv`, and select a `global`, `local`, or `shell` version
@@ -91,14 +91,14 @@ So here I will share a quick guide on how I accomplished that.
       3.9
     ```
 
-1. If you want to set `3.9` as global, just run by running 
-    
+1. If you want to set `3.9` as global, just run by running
+
     ```bash
-    $ pyenv global 3.9
+    pyenv global 3.9
     ```
 
 1. Verify your selection by running
-    
+
     ```bash
     $ pyenv versions
       system

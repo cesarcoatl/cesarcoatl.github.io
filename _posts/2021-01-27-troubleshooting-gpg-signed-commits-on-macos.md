@@ -18,6 +18,7 @@ I have created [an organization](https://github.com/coatl-dev), started [sponsor
 But yesterday a user's commit `Verified` label caught my attention, so I decided to grab a cup of coffee and learn about [managing commit signature verification](https://docs.github.com/articles/generating-a-gpg-key/), and after following all the necessary steps I was able to generate my GPG key and upload it to GitHub, but there was an issue, which is the main topic of this post.
 
 ### The problem
+
 At the [Signing commits](https://docs.github.com/en/github/authenticating-to-github/signing-commits) step I was about to sign my first commit but then tragedy struck.
 
 ```bash
@@ -47,6 +48,7 @@ What? That doesn't make sense! – I thought to myself.
 But finally, I saw the light.
 
 ### The solution
+
 I found [this great guide](https://eriksamuelsson.com/sign-git-commits-on-github-with-gpg-in-macos/) on how to set up GPG, and some useful [Homebrew](https://brew.sh/) formulae, courtesy of [Erik Samuelsson](https://github.com/samuelsson).
 
 But all of the guides that I found did not take into account my current setup; I am using [Powerlevel10k](https://github.com/romkatv/powerlevel10k) by [Roman Perepelitsa](https://github.com/romkatv/), and he had [the answer](https://unix.stackexchange.com/a/608921) to my problem.
@@ -68,15 +70,15 @@ $ echo $GPG_TTY
 And ever since, all my commits are signed by updating my `git` settings:
 
 ```bash
-$ git config --global user.signiningkey XXXXXXXXXXXXXXXX
-$ git config --global commit.gpgsign true
+git config --global user.signiningkey XXXXXXXXXXXXXXXX
+git config --global commit.gpgsign true
 ```
 
 And after installing `pinentry-mac`, I don't have to enter my passphrase every single time.
 
 ```bash
-$ echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
-$ killall gpg-agent
+echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
 ```
 
 And done!
