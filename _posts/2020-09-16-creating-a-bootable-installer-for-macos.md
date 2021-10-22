@@ -6,6 +6,7 @@ cover-img: /assets/img/macOS-Catalina-sunset-1440x900.jpg
 thumbnail-img: /assets/img/macOS-Catalina-230x0w.png
 tags: [guide, macos]
 date: 2020-09-16 13:23 -0700
+last-updated: 2021-10-12 13:08 -0700
 ---
 Since November 2012, I've been a proud owner of a [MacBook Air (13-inch, Mid 2012)](https://support.apple.com/kb/SP670?locale=en_US){:target="_blank"}, and it is with sadness that I must accept it has reached its end-of-life with the upcoming release of [Big Sur](https://www.apple.com/macos/big-sur-preview/){:target="_blank"}.
 
@@ -27,7 +28,7 @@ And these are the instructions:
 1. Restart your Mac and press the alt-option key as soon as it restarts, so you are prompted to select a Startup Disk
 1. Select the **macOS Catalina Installer**
 1. Select **Disk Utility** and click **Continue**
-1. Choose **View > Show All Devices** from the menu bar, and select APPLE SSD
+1. Choose **View > Show All Devices** from the menu bar, and select the storage device, **APPLE SSD TS128E Media** in my case
 1. Click **Erase** and assign these settings:
     1. **Name:** APPLE SSD
     1. **Format:** APFS
