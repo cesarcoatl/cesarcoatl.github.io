@@ -15,7 +15,7 @@ Many things have changed since my [last post]({{ site.url }}/2021/10/26/lessons-
 
 ## The return of `setup.py`
 
-On that last post I briefly mentioned that I was moving myself away from `setup.py` onto `setup.cfg` and `pyproject.toml`, but when I wanted to install `ignition-api` on my Development machine as [`--editable`](https://pip.pypa.io/en/latest/cli/pip_install/#editable-installs) I realized that `setup.py` is needed in order to install it that way on Python 2.
+In that last post I briefly mentioned that I was moving away from `setup.py` onto `setup.cfg` and `pyproject.toml`, but when I wanted to install `ignition-api` on my Development machine as [`--editable`](https://pip.pypa.io/en/latest/cli/pip_install/#editable-installs) I realized that `setup.py` is needed to install it that way on Python 2.
 
 Otherwise, you might get the following error:
 
@@ -87,15 +87,15 @@ A month later I was still debating if I should add type hints or not.
 >
 >—César Román (@thecesrom) [November 11, 2021](https://twitter.com/thecesrom/status/1458595850075074563?ref_src=twsrc%5Etfw)
 
-The main motivation behind this was to get a similar experience accross IDEs. So, before another month went by I decided to add type hints to all [System Functions](https://docs.inductiveautomation.com/display/DOC81/System+Functions).
+The main motivation behind this was to get a similar experience across IDEs. So, before another month went by I decided to add type hints to all [System Functions](https://docs.inductiveautomation.com/display/DOC81/System+Functions).
 
-But I was aware that doing that would put me at a tough position deciding which Python versions I would support. A few months ago I decided that `ignition-api` would be allowed to be installed in Python versions greater or equal to `2.7`; this meant that I should add `try`-`except` blocks when attempting to import `__builtin__` as it was renamed to `builtins` in Python 3, as well as the deprecation of `basestring` and `unicode`.
+But I was aware that doing that would put me in a tough position deciding which Python versions I would support. A few months ago I decided that `ignition-api` would be allowed to be installed in Python versions greater or equal to `2.7`; this meant that I should add `try`-`except` blocks when attempting to import `__builtin__` as it was renamed to `builtins` in Python 3, as well as the deprecation of `basestring` and `unicode`.
 
 Additionally, type hinting appears to be still changing, and Python 3's type hinting style is not recognized in Python 2, which uses what is called "type comments". Take for instance Python 3.10.0 which introduced some changes with [PEP 604](https://www.python.org/dev/peps/pep-0604/).
 
 So providing the same feature for both Python 2 and 3 was immediately out of the question, which made me take a simpler approach: restrict to Python's last 2.7 release, `2.7.18`.
 
-Once that call was made I manly relied on [PEP 484](https://www.python.org/dev/peps/pep-0484/), specially the section on [Python 2.7](https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code), and `mypy`'s ["Type hints cheat sheet (Python 2)"](https://mypy.readthedocs.io/en/stable/cheat_sheet.html).
+Once that call was made I mainly relied on [PEP 484](https://www.python.org/dev/peps/pep-0484/), especially the section on [Python 2.7](https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code), and `mypy`'s ["Type hints cheat sheet (Python 2)"](https://mypy.readthedocs.io/en/stable/cheat_sheet.html).
 
 So to all of you who installed `ignition-api` using Python 3+, my most sincere apologies. But if at some point I see myself cornered and have no other option but to allow Python 3, I'll let all of you know.
 
