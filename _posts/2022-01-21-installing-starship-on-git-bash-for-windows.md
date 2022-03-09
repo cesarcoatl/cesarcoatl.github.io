@@ -12,6 +12,7 @@ tags:
 - terminal
 - windows
 date: 2022-01-21 14:15 -0800
+last-updated: 2022-03-09 14:30 -0800
 ---
 Terminal-wise I feel more comfortable in macOS than Windows (Command Prompt or PowerShell), so it makes sense for me to say that the best feature of Git for Windows is definitely Git Bash.
 
@@ -75,17 +76,17 @@ I chose to do the following:
 
 ```bash
 $ mkdir -p "$HOME/.starship/bin"
-$ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir="$HOME/.starship/bin/"
+$ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir="$HOME/.starship/bin"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.starship/bin/
+> Bin directory: /c/Users/thecesrom/.starship/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.starship/bin/? [y/N] y
-! Bin directory /c/Users/thecesrom/.starship/bin/ is not in your $PATH
+? Install Starship latest to /c/Users/thecesrom/.starship/bin? [y/N] y
 > Installing Starship, please wait…
+replace /c/Users/thecesrom/.starship/bin/starship.exe? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
 ✓ Starship installed
 
 > Please follow the steps for your shell to complete the installation:
@@ -104,7 +105,7 @@ I am watching the Starship [repo](https://github.com/starship/starship) to be no
 ```bash
 #!/usr/bin/bash
 
-sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir="$HOME/.starship/bin/"
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir="$HOME/.starship/bin"
 
 ```
 
@@ -114,19 +115,24 @@ And just by running that script I am able to update.
 $ . "$HOME/starship-upgrade.sh"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.starship/bin/
+> Bin directory: /c/Users/thecesrom/.starship/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.starship/bin/? [y/N] y
-! Bin directory /c/Users/thecesrom/.starship/bin/ is not in your $PATH
+? Install Starship latest to /c/Users/thecesrom/.starship/bin? [y/N] y
 > Installing Starship, please wait…
 replace /c/Users/thecesrom/.starship/bin/starship.exe? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
 ✓ Starship installed
 ```
 
-Even though I have added the custom Starship bin directory to my `$PATH` I am warned it is not found, but in my experience this can be dismissed.
+~~Even though I have added the custom Starship bin directory to my `$PATH` I am warned it is not found, but in my experience this can be dismissed.~~
+
+> Update: {{ "2022-03-09 14:32 -0800" | date: site.date_format }}
+
+Since this post was first published I have learned that the issue I initially reported was partially my mistake, as I was passing the path to the `bin-dir` with a trailing forward slash (`/`) at the end, and in my `$PATH` the directory existed without the trailing forward slash. Ref: [starship#1310](https://github.com/starship/starship/issues/1310), [starship#1341](https://github.com/starship/starship/issues/1341), and [starship#3486](https://github.com/starship/starship/discussions/3486) which resulted in the creation of [starship#3493](https://github.com/starship/starship/issues/3493) by [chipbuster](https://github.com/chipbuster).
+
+So, in order to fix any unintentional mistake like this in the future, I have created a PR ([starship#3723](https://github.com/starship/starship/pull/3723)) to prevent false-negatives in case another user makes the same "mistake".
 
 Thanks for reading!
 
