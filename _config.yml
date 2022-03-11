@@ -159,7 +159,7 @@ disqus: "thecesrom-dev"
 # --- Misc --- #
 
 # Ruby Date Format to show dates of posts
-date_format: "%-d %B, %Y"
+date_format: "%Y-%m-%d"
 
 # Facebook App ID
 #fb_app_id: ""
