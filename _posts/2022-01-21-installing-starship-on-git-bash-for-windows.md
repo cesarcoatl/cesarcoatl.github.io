@@ -12,7 +12,7 @@ tags:
 - terminal
 - windows
 date: 2022-01-21 14:15 -0800
-last-updated: 2022-03-11 14:12 -0800
+last-updated: 2022-03-14 07:59 -0700
 ---
 Terminal-wise I feel more comfortable in macOS than Windows (Command Prompt or PowerShell), so it makes sense for me to say that the best feature of Git for Windows is definitely Git Bash.
 
@@ -75,17 +75,17 @@ And this is because the `/usr` directory is locked. So the alternative, as sugge
 I chose to do the following:
 
 ```bash
-$ mkdir -p "$HOME/.starship/bin"
-$ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir "$HOME/.starship/bin"
+$ mkdir -p "$HOME/.local/bin"
+$ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir "$HOME/.local/bin"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.starship/bin
+> Bin directory: /c/Users/thecesrom/.local/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.starship/bin? [y/N] y
-! Bin directory /c/Users/thecesrom/.starship/bin is not in your $PATH
+? Install Starship latest to /c/Users/thecesrom/.local/bin? [y/N] y
+! Bin directory /c/Users/thecesrom/.local/bin is not in your $PATH
 > Installing Starship, please wait…
 ✓ Starship installed
 
@@ -105,7 +105,7 @@ I am watching the Starship [repo](https://github.com/starship/starship) to be no
 ```bash
 #!/usr/bin/bash
 
-curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir="$HOME/.starship/bin"
+curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir "$HOME/.local/bin"
 
 ```
 
@@ -115,12 +115,12 @@ And just by running that script I am able to update.
 $ . "$HOME/starship-upgrade.sh"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.starship/bin
+> Bin directory: /c/Users/thecesrom/.local/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.starship/bin? [y/N] y
+? Install Starship latest to /c/Users/thecesrom/.local/bin? [y/N] y
 > Installing Starship, please wait…
 ✓ Starship installed
 ```
