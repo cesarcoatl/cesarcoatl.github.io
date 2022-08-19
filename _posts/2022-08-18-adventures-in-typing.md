@@ -156,4 +156,4 @@ And with that, my friends, the `AttributeError: 'module' object has no attribute
 
 Thanks for reading!
 
-P.S. `copy.py` lines 59-63 were introduced by no other than @gvanrossum back in November 27, 2000 in [`f8baad0`](https://github.com/python/cpython/commit/f8baad0f1759a5b26b050636fd327e874e17c5a0#diff-a06198e13686594114a45e7863b954a226ce08d43f724079faa7fe8b3c931703R59-R63) which took 21 years to come bite me (or save me?)
+P.S. `copy.py` lines 59-63 were committed by no other than [@gvanrossum](https://github.com/gvanrossum) back in November 27, 2000 in [`f8baad0`](https://github.com/python/cpython/commit/f8baad0f1759a5b26b050636fd327e874e17c5a0#diff-a06198e13686594114a45e7863b954a226ce08d43f724079faa7fe8b3c931703R59-R63) which took 21 years to come bite me (or save me?)
