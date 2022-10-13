@@ -9,7 +9,7 @@ tags:
 - python
 - tutorial
 date: 2020-09-21 13:02 -0700
-last-updated: 2021-06-07 20:49 -0700
+last-updated: 2022-10-13 08:34 -0700
 ---
 ## Table of Contents
 
@@ -70,7 +70,7 @@ Load `pyenv` automatically by running the following command to add it to your sh
 Starting with `pyenv` [v2.0.0](https://github.com/pyenv/pyenv/releases/tag/v2.0.0){:target="_blank"} the `pyenv init` command has changed.
 
 ```bash
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.zshrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
 
 Restart shell
