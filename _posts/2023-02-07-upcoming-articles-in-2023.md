@@ -19,7 +19,7 @@ Hello, readers!
 
 These are some of the upcoming articles in this space.
 
-1. Taking a ten-year-old MacBook Air out for one last ride with Ubuntu - From macOS to Ubuntu, Pt. 1
+1. Taking a ten-year-old MacBook Air out for one last ride with Ubuntu - From macOS to Ubuntu, Pt. 1 ([link]({{ site.url }}/2023/02/18/taking-a-ten-year-old-macbook-air-out-for-one-last-ride-with-ubuntu/))
 1. Installing pyenv and managing Python versions in Ubuntu - From macOS to Ubuntu, Pt. 2
 1. Python 3 tools I use for my Python 2 projects - 2023 edition
 1. Why I chose `tox` over `nox`?
