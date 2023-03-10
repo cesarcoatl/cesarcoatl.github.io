@@ -16,8 +16,8 @@ navbar-links:
   Archive: "archive"
   Organizations:
     - coatl.dev: "https://github.com/coatl-dev"
+    - ignition-api: "https://github.com/ignition-api"
   Projects:
-    - Ignition: "https://thecesrom.dev/Ignition"
     - incendium: "https://thecesrom.dev/incendium"
 
 # --- Logo --- #
