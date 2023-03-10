@@ -2,6 +2,11 @@
 layout: post
 title: Taking a ten-year-old MacBook Air out for one last ride with Ubuntu
 subtitle: From macOS to Ubuntu, Pt. 1
+tags:
+- linux
+- macos
+- python
+- ubuntu
 date: 2023-02-18 12:42 -0800
 ---
 When I started this blog I wrote about reinstalling macOS 10.15, better know as Catalina, on my Mid 2012 13" MacBook Air, which in its 10 years with me all I've done to it is replace the battery, and more recently I had to get a new power adapter. Not bad if you ask me.
