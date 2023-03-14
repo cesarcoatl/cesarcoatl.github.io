@@ -67,7 +67,7 @@ $ make altinstall
 Finally add symlinks:
 
 ```sh
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/2t03-3.10            ${PYENV_ROOT}/versions/3.10.10/bin/2to3
+ln -s ${PYENV_ROOT}/versions/3.10.10/bin/2to3-3.10            ${PYENV_ROOT}/versions/3.10.10/bin/2to3
 ln -s ${PYENV_ROOT}/versions/3.10.10/bin/idle3.10             ${PYENV_ROOT}/versions/3.10.10/bin/idle
 ln -s ${PYENV_ROOT}/versions/3.10.10/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.10/bin/pip
 ln -s ${PYENV_ROOT}/versions/3.10.10/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.10/bin/pip3
