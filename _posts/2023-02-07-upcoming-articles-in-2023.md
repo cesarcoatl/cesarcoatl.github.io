@@ -13,6 +13,7 @@ tags:
 - python3
 - terminal
 - ubuntu
+- pinned
 date: 2023-02-07 14:13 -0800
 ---
 Hello, readers!

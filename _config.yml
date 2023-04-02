@@ -41,6 +41,7 @@ round-avatar: true
 social-network-links:
   email: "cesar@thecesrom.dev"
   github: thecesrom
+  mastodon: fosstodon.org/@thecesrom
   twitter: thecesrom
 
 # If you want to show a link to an RSS in the footer, add the site description here.
