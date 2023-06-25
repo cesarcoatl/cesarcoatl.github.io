@@ -4,7 +4,7 @@ remote_theme: daattali/beautiful-jekyll@6.0.1
 
 # Name of website
 title: César Román - Coder, Blogger
-url: "https://blog.coatl.dev"
+url: "https://cesar.coatl.dev"
 
 # Your name to show in the footer
 author: César Román
@@ -46,7 +46,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: blog.coatl.dev feed
+rss-description: cesar.coatl.dev feed
 
 # --- General options --- #
 
@@ -59,7 +59,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "blog.coatl.dev"
+url-pretty: "cesar.coatl.dev"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 20
