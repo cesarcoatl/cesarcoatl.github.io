@@ -10,6 +10,7 @@ tags:
 - python
 - ubuntu
 date: 2023-03-10 14:35 -0800
+last-updated: 2023-07-01 14:56 -0700
 ---
 Read **Part 1** [here]({{ site.url }}/2023/02/18/taking-a-ten-year-old-macbook-air-out-for-one-last-ride-with-ubuntu/).
 
@@ -52,29 +53,39 @@ And for building Python 3.10:
 
 ```sh
 $ cd /tmp/
-$ wget https://www.python.org/ftp/python/3.10.10/Python-3.10.10.tgz
-$ tar xzf Python-3.10.10.tgz
-$ cd Python-3.10.10
-$ CFLAGS="-I$(brew --prefix gdbm)/include -I$(brew --prefix xz)/include"  \
-  LDFLAGS="-L$(brew --prefix gdbm)/lib -I$(brew --prefix xz)/lib" \
-  PKG_CONFIG_PATH="$(brew --prefix tcl-tk)/lib/pkgconfig" \
-  ./configure --with-openssl="$(brew --prefix openssl@1.1)" \
-          --prefix="${PYENV_ROOT}/versions/3.10.10/"
-$ make --silent
+$ wget https://www.python.org/ftp/python/3.10.12/Python-3.10.12.tgz
+$ tar xzf Python-3.10.12.tgz
+$ cd Python-3.10.12
+$ CPPFLAGS="-I$(brew --prefix gdbm)/include -I$(brew --prefix xz)/include" \
+  LDFLAGS="-L$(brew --prefix gdbm)/lib -L$(brew --prefix xz)/lib" \
+  ./configure --with-openssl="$(brew --prefix openssl@3.0)" \
+              --with-tcltk-libs="$(pkg-config --libs tcl tk)" \
+              --with-tcltk-includes="$(pkg-config --cflags tcl tk)" \
+              --prefix="${PYENV_ROOT}/versions/3.10.12/"
+$ make -s -j2
+ CC='gcc' LDSHARED='gcc -shared -L/home/linuxbrew/.linuxbrew/opt/gdbm/lib -L/home/linuxbrew/.linuxbrew/opt/xz/lib   ' OPT='-g -Og -Wall'      _TCLTK_INCLUDES='-I/home/linuxbrew/.linuxbrew/Cellar/tcl-tk/8.6.13_3/include/tcl-tk -I/home/linuxbrew/.linuxbrew/opt/zlib/include' _TCLTK_LIBS='-L/home/linuxbrew/.linuxbrew/Cellar/tcl-tk/8.6.13_3/lib -ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6'  ./python -E ./setup.py -q build
+
+The following modules found by detect_modules() in setup.py, have been
+built by the Makefile instead, as configured by the Setup files:
+_abc                  pwd                   time
+
+renaming build/scripts-3.10/pydoc3 to build/scripts-3.10/pydoc3.10
+renaming build/scripts-3.10/idle3 to build/scripts-3.10/idle3.10
+renaming build/scripts-3.10/2to3 to build/scripts-3.10/2to3-3.10
 $ make altinstall
 ```
 
 Finally add symlinks:
 
 ```sh
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/2to3-3.10            ${PYENV_ROOT}/versions/3.10.10/bin/2to3
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/idle3.10             ${PYENV_ROOT}/versions/3.10.10/bin/idle
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.10/bin/pip
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.10/bin/pip3
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/pydoc3.10            ${PYENV_ROOT}/versions/3.10.10/bin/pydoc
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/python3.10           ${PYENV_ROOT}/versions/3.10.10/bin/python
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/python3.10-config    ${PYENV_ROOT}/versions/3.10.10/bin/python-config
-ln -s ${PYENV_ROOT}/versions/3.10.10/bin/python3.10           ${PYENV_ROOT}/versions/3.10.10/bin/python3
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/2to3-3.10            ${PYENV_ROOT}/versions/3.10.12/bin/2to3
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/idle3.10             ${PYENV_ROOT}/versions/3.10.12/bin/idle
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.12/bin/pip
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/pip3.10              ${PYENV_ROOT}/versions/3.10.12/bin/pip3
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/pydoc3.10            ${PYENV_ROOT}/versions/3.10.12/bin/pydoc
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/python3.10           ${PYENV_ROOT}/versions/3.10.12/bin/python
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/python3.10-config    ${PYENV_ROOT}/versions/3.10.12/bin/python-config
+ln -s ${PYENV_ROOT}/versions/3.10.12/bin/python3.10           ${PYENV_ROOT}/versions/3.10.12/bin/python3
 ```
 
 And just like that I was ready to go.
