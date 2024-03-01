@@ -35,7 +35,7 @@ Let's explain each option.
 - `-l` or `--line-length`: How many characters per line to allow. [default: 88]
 - `-t` or `--target-version`: Python versions that should be supported by Black's output. [default: per-file auto-detection]
 
-Fairly simple. Allow `79` characters per line, and use `py27` as the targetted version.
+Fairly simple. Allow `79` characters per line, and use `py27` as the targeted version.
 
 ### isort
 
