@@ -19,7 +19,7 @@ Hello, readers!
 
 These are some of the upcoming articles in this space.
 
-1. Python 3 tools I use for my Python 2 projects - 2024 edition
+1. Python 3 tools I use for my Python 2 projects - 2024 edition ([link]({{ site.url }}/2024/03/01/python-3-tools-i-use-for-my-python-2-projects-2024-edition/))
 1. Why I chose `tox` over `nox`?
 1. Caching in Azure Pipelines and GitHub Actions - Real life examples
 1. Moving from `setup.cfg` to `pyproject.toml`
