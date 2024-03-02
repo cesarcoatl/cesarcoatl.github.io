@@ -88,7 +88,7 @@ The same thing happened when Python 3.12 was released, but I have recently teste
 
 ~~As of the time of the posting of this article, `mypy[python2]==0.971` fails to install on 3.13.0a4.~~
 
-Update: I just tried installing `mypy[python2]==0.971' using Python 3.13.0a4 and it worked. Securing my GitHub workflows and Azure Pipelines till October 2029.
+Update: I just tried installing `mypy[python2]==0.971` using Python 3.13.0a4 and it worked. Securing my GitHub workflows and Azure Pipelines till October 2029.
 
 ## Packaging and publishing
 
