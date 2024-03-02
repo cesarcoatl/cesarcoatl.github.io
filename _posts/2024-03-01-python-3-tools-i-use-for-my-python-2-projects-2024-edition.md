@@ -8,6 +8,7 @@ tags:
 - jython
 - python
 date: 2024-03-01 12:56 -0800
+last-updated: 2024-03-01 17:00 -0800
 ---
 ## TOC
 
@@ -85,7 +86,9 @@ I had been using Python 3.10 for a while, and when 3.11 was released I ran into 
 
 The same thing happened when Python 3.12 was released, but I have recently tested 3.12.2 and I am happy to say that my CI is running 3.12.
 
-As of the time of the posting of this article, `mypy[python2]==0.971` fails to install on 3.13.0a4.
+~~As of the time of the posting of this article, `mypy[python2]==0.971` fails to install on 3.13.0a4.~~
+
+Update: I just tried installing `mypy[python2]==0.971' using Python 3.13.0a4 and it worked. Securing my GitHub workflows and Azure Pipelines till October 2029.
 
 ## Packaging and publishing
 
