@@ -40,8 +40,8 @@ Building native extensions. This could take a while...
 ERROR:  Error installing eventmachine:
 	ERROR: Failed to build gem native extension.
 
-    current directory: /Users/thecesrom/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/eventmachine-1.2.7/ext
-/Users/thecesrom/.rbenv/versions/2.7.4/bin/ruby -I /Users/thecesrom/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20221220-4681-wmlash.rb extconf.rb
+    current directory: /Users/cesarcoatl/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/eventmachine-1.2.7/ext
+/Users/cesarcoatl/.rbenv/versions/2.7.4/bin/ruby -I /Users/cesarcoatl/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20221220-4681-wmlash.rb extconf.rb
 checking for -lcrypto... no
 checking for openssl/ssl.h... yes
 checking for openssl/err.h... yes
@@ -73,8 +73,8 @@ make: *** [rubyeventmachine.bundle] Error 1
 
 make failed, exit code 2
 
-Gem files will remain installed in /Users/thecesrom/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/eventmachine-1.2.7 for inspection.
-Results logged to /Users/thecesrom/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/extensions/arm64-darwin-22/2.7.0/eventmachine-1.2.7/gem_make.out
+Gem files will remain installed in /Users/cesarcoatl/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/eventmachine-1.2.7 for inspection.
+Results logged to /Users/cesarcoatl/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/extensions/arm64-darwin-22/2.7.0/eventmachine-1.2.7/gem_make.out
 ```
 
 Before my old MacBook Air died, I did manage to install Ubuntu 22.10 and didn't run into any issues running my blog. But since this was my first time trying M1, and having read `not found for architecture arm64`, it did look like an issue with M1's ARM architecture.

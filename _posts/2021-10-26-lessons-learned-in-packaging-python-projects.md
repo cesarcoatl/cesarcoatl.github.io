@@ -13,7 +13,7 @@ tags:
 - testpypi
 date: 2021-10-26 15:39 -0700
 ---
-Recently I embarked upon a mission, and that mission was to package my [Ignition](https://github.com/thecesrom/Ignition) project, which was built based on my scripting needs, but did not make use of all System Functions.
+Recently I embarked upon a mission, and that mission was to package my [Ignition](https://github.com/cesarcoatl/Ignition) project, which was built based on my scripting needs, but did not make use of all System Functions.
 
 As time passed the project grew along with my needs, but after a comment made by [RadicalRumin](https://forum.inductiveautomation.com/t/system-library-files/29773/3?u=thecesrom.git) at Inductive Automation Forum, I got the boost I needed to implement all System Functions, and created branches for each active version.
 
@@ -125,8 +125,8 @@ On my ["Configuring Jython in PyCharm"]({{ site.url }}/2020/10/01/configuring-jy
 
 But! There's always a but. Jython fails to import modules/subpackages under `com.inductiveautomation`. See: [jython#131](https://github.com/jython/jython/issues/131). And that, my friends, is what made me pull the plug on Ignition's `jython` branch, and marking `ignition-api-jython` as **Inactive**.
 
-Could this be fixed? I don't think so, as Jython is somewhat a graveyard at this moment, and I don't have the knowledge nor interest in working on a possible fix. But still, I decided to move the `jython` branch to its own repo ([ignition-api-jython](https://github.com/thecesrom/ignition-api-jython)) in case there is a solution in the future, or if someone is willing to fork it.
+Could this be fixed? I don't think so, as Jython is somewhat a graveyard at this moment, and I don't have the knowledge nor interest in working on a possible fix. But still, I decided to move the `jython` branch to its own repo ([ignition-api-jython](https://github.com/ignition-api/jython)) in case there is a solution in the future, or if someone is willing to fork it.
 
-Finally, I learned about automating [publishing to PyPI via GitHub actions](https://github.com/thecesrom/Ignition/blob/HEAD/.github/workflows/pypi_upload.yml), as well as moving away from `setup.py` and use `pyproject.toml` and `setup.cfg` instead, and installing Python packages' extras and using them for `pre-commit`. But that, my friends, will be a story for another time.
+Finally, I learned about automating [publishing to PyPI via GitHub actions](https://github.com/cesarcoatl/Ignition/blob/HEAD/.github/workflows/pypi_upload.yml), as well as moving away from `setup.py` and use `pyproject.toml` and `setup.cfg` instead, and installing Python packages' extras and using them for `pre-commit`. But that, my friends, will be a story for another time.
 
 Thanks for reading. And happy coding.

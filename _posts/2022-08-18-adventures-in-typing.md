@@ -23,7 +23,7 @@ Welcome to the third installment of what now I call the "Python packaging series
 Last time I wrote about my progress and lessons learned while creating the `ignition-api` Python package, and a lot has happened in the last eight months, so let me fill you in.
 
 * In March 2022, the **ignition-api** [GitHub organization](https://github.com/ignition-api) was born
-  * With that, each branch of the **thecesrom/Ignition** repo was moved into its own repo; [jython](https://github.com/ignition-api/jython), [7.9](https://github.com/ignition-api/7.9), [8.0](https://github.com/ignition-api/8.0), and [8.1](https://github.com/ignition-api/8.1)
+  * With that, each branch of the **cesarcoatl/Ignition** repo was moved into its own repo; [jython](https://github.com/ignition-api/jython), [7.9](https://github.com/ignition-api/7.9), [8.0](https://github.com/ignition-api/8.0), and [8.1](https://github.com/ignition-api/8.1)
 * In June 29 2022, `ignition-api-stubs` got its Alpha release, and a month later it got its Beta release
   * Some valuable knowledge in typing was gained (more on `stubgen` and `TypedDict` in another post)
 * `git-cliff` was replaced by `commitizen` on actively developed repos
@@ -44,7 +44,7 @@ The reason why I decided to create an alias called `String` instead of using `An
 String = Union[str, unicode]
 ```
 
-After some debate, I decided to refactor my code and move the `String` alias to `java.lang`, where it belonged all along. Enter commit [ea530ac](https://github.com/thecesrom/Ignition/commit/ea530ac).
+After some debate, I decided to refactor my code and move the `String` alias to `java.lang`, where it belonged all along. Enter commit [ea530ac](https://github.com/cesarcoatl/Ignition/commit/ea530ac).
 
 `ignition-api` [8.1.13](https://pypi.org/project/ignition-api/8.1.13/) was released in December 2021, and I did not realize my mistake until January 2022 when I upgraded my virtual environment for my `incendium` project and tried to run `pip list`, only then it dawned upon me I had pushed a bad release.
 
@@ -52,27 +52,27 @@ Once anyone updated to `ignition-api` 8.1.13, `pip` under their Python environme
 
 ```sh
 Traceback (most recent call last):
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/lib/python2.7/runpy.py", line 174, in _run_module_as_main
     "__main__", fname, loader, pkg_name)
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/lib/python2.7/runpy.py", line 72, in _run_code
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/lib/python2.7/runpy.py", line 72, in _run_code
     exec code in run_globals
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/envs/incendium/lib/python2.7/site-packages/pip/__main__.py", line 23, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/envs/incendium/lib/python2.7/site-packages/pip/__main__.py", line 23, in <module>
     from pip._internal.cli.main import main as _main  # isort:skip # noqa
-  File "/Users/thecesrom/.pyenv/versions/incendium/lib/python2.7/site-packages/pip/_internal/cli/main.py", line 10, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/incendium/lib/python2.7/site-packages/pip/_internal/cli/main.py", line 10, in <module>
     from pip._internal.cli.autocompletion import autocomplete
-  File "/Users/thecesrom/.pyenv/versions/incendium/lib/python2.7/site-packages/pip/_internal/cli/autocompletion.py", line 4, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/incendium/lib/python2.7/site-packages/pip/_internal/cli/autocompletion.py", line 4, in <module>
     import optparse
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/lib/python2.7/optparse.py", line 90, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/lib/python2.7/optparse.py", line 90, in <module>
     from gettext import gettext
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/lib/python2.7/gettext.py", line 49, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/lib/python2.7/gettext.py", line 49, in <module>
     import locale, copy, os, re, struct, sys
-  File "/Users/thecesrom/.pyenv/versions/2.7.18/lib/python2.7/copy.py", line 60, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/2.7.18/lib/python2.7/copy.py", line 60, in <module>
     from org.python.core import PyStringMap
-  File "/Users/thecesrom/.pyenv/versions/incendium/lib/python2.7/site-packages/org/python/core/__init__.py", line 5, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/incendium/lib/python2.7/site-packages/org/python/core/__init__.py", line 5, in <module>
     from java.lang import Object
-  File "/Users/thecesrom/.pyenv/versions/incendium/lib/python2.7/site-packages/java/lang/__init__.py", line 22, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/incendium/lib/python2.7/site-packages/java/lang/__init__.py", line 22, in <module>
     from typing import Union
-  File "/Users/thecesrom/.pyenv/versions/incendium/lib/python2.7/site-packages/typing.py", line 1440, in <module>
+  File "/Users/cesarcoatl/.pyenv/versions/incendium/lib/python2.7/site-packages/typing.py", line 1440, in <module>
     copy._copy_dispatch[GenericMeta] = _copy_generic
 AttributeError: 'module' object has no attribute '_copy_dispatch'
 ```

@@ -11,9 +11,9 @@ date: 2021-01-27 11:24 -0800
 ---
 ### Introduction
 
-I've been using GitHub for the past couple of years, but it was not until last year that my contribution activity increased. Some PRs [here](https://github.com/justinlettau/sql-source-control/pull/133) and some others [here](https://github.com/Homebrew/homebrew-cask-versions/pulls?q=is%3Apr+author%3Athecesrom) and [there](https://github.com/Homebrew/homebrew-cask/pulls?q=is%3Apr+author%3Athecesrom).
+I've been using GitHub for the past couple of years, but it was not until last year that my contribution activity increased. Some PRs [here](https://github.com/justinlettau/sql-source-control/pull/133) and some others [here](https://github.com/Homebrew/homebrew-cask-versions/pulls?q=is%3Apr+author%3Acesarcoatl) and [there](https://github.com/Homebrew/homebrew-cask/pulls?q=is%3Apr+author%3Acesarcoatl).
 
-I have created [an organization](https://github.com/coatl-dev), started [sponsoring](https://github.com/thecesrom?tab=sponsoring), and switched from HTTP to SSH following [this useful guide](https://docs.github.com/articles/generating-an-ssh-key/).
+I have created [an organization](https://github.com/coatl-dev), started [sponsoring](https://github.com/cesarcoatl?tab=sponsoring), and switched from HTTP to SSH following [this useful guide](https://docs.github.com/articles/generating-an-ssh-key/).
 
 But yesterday a user's commit `Verified` label caught my attention, so I decided to grab a cup of coffee and learn about [managing commit signature verification](https://docs.github.com/articles/generating-a-gpg-key/), and after following all the necessary steps I was able to generate my GPG key and upload it to GitHub, but there was an issue, which is the main topic of this post.
 

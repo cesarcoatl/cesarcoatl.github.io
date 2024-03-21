@@ -79,13 +79,13 @@ $ mkdir -p "$HOME/.local/bin"
 $ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir "$HOME/.local/bin"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.local/bin
+> Bin directory: /c/Users/cesarcoatl/.local/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.local/bin? [y/N] y
-! Bin directory /c/Users/thecesrom/.local/bin is not in your $PATH
+? Install Starship latest to /c/Users/cesarcoatl/.local/bin? [y/N] y
+! Bin directory /c/Users/cesarcoatl/.local/bin is not in your $PATH
 > Installing Starship, please wait…
 ✓ Starship installed
 
@@ -115,12 +115,12 @@ And just by running that script I am able to update.
 $ . "$HOME/starship-upgrade.sh"
 
   Configuration
-> Bin directory: /c/Users/thecesrom/.local/bin
+> Bin directory: /c/Users/cesarcoatl/.local/bin
 > Platform:      pc-windows-msvc
 > Arch:          x86_64
 
 > Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-pc-windows-msvc.zip
-? Install Starship latest to /c/Users/thecesrom/.local/bin? [y/N] y
+? Install Starship latest to /c/Users/cesarcoatl/.local/bin? [y/N] y
 > Installing Starship, please wait…
 ✓ Starship installed
 ```

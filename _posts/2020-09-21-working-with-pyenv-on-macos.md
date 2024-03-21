@@ -105,7 +105,7 @@ pyenv install 3.9.5
 ### Installing Python 2.7
 
 {: .box-note}
-For the [Ignition](https://github.com/thecesrom/Ignition/){:target="_blank"} project I maintain, both Python 2.7.18 or Jython 2.7.1 are required.
+For the [Ignition](https://github.com/cesarcoatl/Ignition/){:target="_blank"} project I maintain, both Python 2.7.18 or Jython 2.7.1 are required.
 
 So, first, I will install Python 2.7.18.
 
@@ -148,7 +148,7 @@ Run `pyenv versions` to list all Python versions known to pyenv; an asterisk wil
 
 ```bash
 $ pyenv versions
-* system (set by /Users/thecesrom/.pyenv/version)
+* system (set by /Users/cesarcoatl/.pyenv/version)
   2.7.18
   3.9.5
 ```
@@ -165,7 +165,7 @@ Verify your selection by running `pyenv versions`.
 $ pyenv versions
   system
   2.7.18
-* 3.9.5 (set by /Users/thecesrom/.pyenv/version)
+* 3.9.5 (set by /Users/cesarcoatl/.pyenv/version)
 ```
 
 Alternatively, you could [specify multiple versions as global at once](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global-advanced){:target="_blank"}.

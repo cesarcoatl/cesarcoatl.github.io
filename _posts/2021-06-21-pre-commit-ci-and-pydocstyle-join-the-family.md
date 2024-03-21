@@ -16,7 +16,7 @@ First, `pre-commit.ci`. `pre-commit.ci` is ***"a continuous integration service 
 
 > Developers spend a fair chunk of time during their development flow on fixing relatively trivial problems in their code. pre-commit.ci both enforces that these issues are discovered (which is opt-in for each developer's workflow via pre-commit) but also fixes the issues automatically, letting developers focus their time on more valuable problems.
 
-I have enabled `pre-commit.ci` on two of my repos ([Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} and [incendium](https://github.com/thecesrom/incendium){:target="_blank"}) and so far three PRs have been created and successfully merged.
+I have enabled `pre-commit.ci` on two of my repos ([Ignition](https://github.com/cesarcoatl/Ignition){:target="_blank"} and [incendium](https://github.com/cesarcoatl/incendium){:target="_blank"}) and so far three PRs have been created and successfully merged.
 
 In order to install `pre-commit.ci`, I signed in using my GitHub account and granted access to both repos, and that was it! I had already created the `.pre-commit-config.yaml` file for `pre-commit`, and although it is not required I did add a `ci` section to that file and customize the `autoupdate_commit_msg` value to match the [Conventional Commits](https://www.conventionalcommits.org/){:target="_blank"} style I adopted back in February. Learn more about `pre-commit.ci` configuration [here](https://pre-commit.ci/#configuration){:target="_blank"}.
 

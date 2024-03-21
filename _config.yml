@@ -18,7 +18,7 @@ navbar-links:
     - coatl.dev: "https://github.com/coatl-dev"
     - ignition-api: "https://github.com/ignition-api"
   Projects:
-    - incendium: "https://github.com/thecesrom/incendium"
+    - incendium: "https://github.com/ignition-incendium/incendium"
 
 # --- Logo --- #
 
@@ -40,9 +40,9 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "cesar@coatl.dev"
-  github: thecesrom
-  mastodon: fosstodon.org/@thecesrom
-  twitter: thecesrom
+  github: cesarcoatl
+  mastodon: fosstodon.org/@cesarcoatl
+  # twitter: cesarcoatl
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
@@ -71,7 +71,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "azure,cesrom,coatl,coatl.dev,coatl-dev,__coatldev__,data,homebrew,macos,pycharm,python,sql,thecesrom,vscode"
+keywords: "azure,coatl,coatl.dev,coatl-dev,__coatldev__,data,homebrew,macos,pycharm,python,sql,cesarcoatl,vscode"
 
 # --- Colours / background image --- #
 

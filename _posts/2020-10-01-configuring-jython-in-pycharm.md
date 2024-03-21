@@ -125,7 +125,7 @@ $ brew install coatl-dev/coatl-dev/jython@2.7.1
 ==> Downloading https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.1/jython-installer-2.7.1
 ==> Downloading from https://repo1.maven.org/maven2/org/python/jython-installer/2.7.1/jython-installer-2.7.1.jar
 ######################################################################## 100.0%
-==> java -jar /Users/thecesrom/Library/Caches/Homebrew/downloads/558a886fedd7c18b1e12419bd4ab398b3ad7aaa902df4f5686ef3b695b89f2b9--jython-installer-2.7.1.jar -s -d /usr/local/Cellar/jython@2.7.1/2.7.1/libexec
+==> java -jar /Users/cesarcoatl/Library/Caches/Homebrew/downloads/558a886fedd7c18b1e12419bd4ab398b3ad7aaa902df4f5686ef3b695b89f2b9--jython-installer-2.7.1.jar -s -d /usr/local/Cellar/jython@2.7.1/2.7.1/libexec
 🍺  /usr/local/Cellar/jython@2.7.1/2.7.1: 3,785 files, 148.7MB, built in 1 minute 22 seconds
 ```
 
@@ -172,7 +172,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     -J--add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED
     ```
 
-To test it I will be using the [jython](https://github.com/thecesrom/Ignition/tree/jython){:target="_blank"} branch of my [Ignition](https://github.com/thecesrom/Ignition){:target="_blank"} project.
+To test it I will be using the [jython](https://github.com/cesarcoatl/Ignition/tree/jython){:target="_blank"} branch of my [Ignition](https://github.com/cesarcoatl/Ignition){:target="_blank"} project.
 
 And when I run the Python Console I can do the following:
 
