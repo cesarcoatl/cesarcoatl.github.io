@@ -1,15 +1,18 @@
-remote_theme: daattali/beautiful-jekyll@6.0.1
+remote_theme: "daattali/beautiful-jekyll@6.0.1"
 
 # --- Required options --- #
+############################
 
 # Name of website
-title: César Román - Coder, Blogger
+title: "César Román - Coder, Blogger"
 url: "https://cesar.coatl.dev"
 
 # Your name to show in the footer
-author: César Román
+author: "César Román"
 
+###############################################
 # --- List of links in the navigation bar --- #
+###############################################
 
 navbar-links:
   About Me: "about"
@@ -20,7 +23,9 @@ navbar-links:
   Projects:
     - incendium: "https://github.com/ignition-incendium/incendium"
 
+################
 # --- Logo --- #
+################
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
@@ -34,21 +39,26 @@ round-avatar: true
 #title-img: /path/to/image
 
 
+#####################################
 # --- Footer social media links --- #
+#####################################
 
 # Select the social network links that you want to show in the footer.
+# You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "cesar@coatl.dev"
-  github: cesarcoatl
-  mastodon: fosstodon.org/@cesarcoatl
-  # twitter: cesarcoatl
+  rss: true
+  github: "cesarcoatl"
+  mastodon: "fosstodon.org/@cesarcoatl"
 
-# If you want to show a link to an RSS in the footer, add the site description here.
-# If you don't want to show an RSS link, remove the following line.
-rss-description: cesar.coatl.dev feed
+# If you want your website to generate an RSS feed, provide a description
+# The URL for the feed will be https://<your_website>/feed.xml
+rss-description: "cesar.coatl.dev feed"
 
+###########################
 # --- General options --- #
+###########################
 
 # Select which social network share links to show in posts
 share-links-active:
@@ -61,8 +71,11 @@ share-links-active:
 # Remove this if you don't want a link in the footer
 url-pretty: "cesar.coatl.dev"
 
+# Add the website title to the title of every page
+title-on-all-pages: true
+
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 20
+excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
@@ -70,10 +83,23 @@ feed_show_excerpt: true
 # Whether or not to show a list of tags below each post preview in the feed page
 feed_show_tags: true
 
+# Add a search button to the navbar
+post_search: true
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+# edit_page_button: true
+
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
+
 # The keywords to associate with your website, for SEO purposes
 keywords: "azure,coatl,coatl.dev,coatl-dev,__coatldev__,data,homebrew,macos,pycharm,python,sql,cesarcoatl,vscode"
 
+######################################
 # --- Colours / background image --- #
+######################################
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
@@ -87,6 +113,7 @@ hover-col: "#0085A1"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -106,58 +133,24 @@ footer-link-col: "#404040"
 #site-js:
 #  - "/assets/js/custom-script.js"
 
-# --- Web Analytics Section --- #
-
-# Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
-
-# Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: ""
-
-# Google Tag Manager ID
-#gtm: ""
-
-# Matomo (aka Piwik) Web statistics
-# Uncomment the following section to enable Matomo. The opt-out parameter controls
-# whether or not you want to allow users to opt out of tracking.
-#matomo:
-#  site_id: "9"
-#  uri: "demo.wiki.pro"
-#  opt-out: true
-
+####################
 # --- Comments --- #
+####################
 
-# To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "thecesrom-dev"
+giscus:
+ hostname: "giscus.app"
+ repository: "cesarcoatl/cesarcoatl.github.io"
+ repository-id: "MDEwOlJlcG9zaXRvcnkyOTA5NDAyNjU="
+ category: "General"
+ category-id: "DIC_kwDOEVdlac4CeNaz"
+ mapping: "pathname"
+ reactions-enabled: "1"
+ emit-metadata: "0"
+ theme: "light"
 
-# To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
-#fb_comment_id: ""
-
-# To use Utterances comments: (0) uncomment the following section, (1) fill in
-# "repository" (make sure the repository is public), (2) Enable Issues in your repository,
-# (3) Install the Utterances app in your repository https://github.com/apps/utterances
-# See more details about the parameters below at https://utteranc.es/
-#utterances:
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  issue-term: title   # Mapping between blog posts and GitHub issues
-#  theme: github-light # Utterances theme
-#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
-
-# To use Staticman comments, first invite `staticmanlab` as a collaborator to your repository and
-# accept the invitation by going to `https://staticman3.herokuapp.com/v3/connect/github/<username>/<repo-name>`.
-# Then uncomment the following section and fill in "repository" and "branch".
-# If you want to use reCaptcha for staticman (optional for spam protection), then fill
-# in the "siteKey" and "secret" parameters below and also in `staticman.yml`.
-# See more details at https://staticman.net/
-#staticman:
-#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-#  endpoint   : # (optional) URL of your own deployment, with a trailing slash eg. https://<your-api>/v3/entry/github/ (will fallback to a public GitLab instance)
-#  reCaptcha:
-#    siteKey  : # Use your own site key, you need to apply for one on Google
-#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
-
+################
 # --- Misc --- #
+################
 
 # Ruby Date Format to show dates of posts
 date_format: "%Y-%m-%d"
@@ -165,7 +158,9 @@ date_format: "%Y-%m-%d"
 # Facebook App ID
 #fb_app_id: ""
 
+#################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
+#################################################################################
 
 # Output options (more information on Jekyll's site)
 timezone: "America/Tijuana"
