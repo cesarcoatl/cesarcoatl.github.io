@@ -12,7 +12,7 @@ Recently I purchased the thecesrom.dev domain at Google Domains, as it was cheap
 
 I am not yet sure what I will do with it, but one thing is for certain, it will be related to Python. Hence, [Coatl](https://en.wikipedia.org/wiki/Coatl){:target="_blank"}.
 
-And once that orgranization was created, I wanted to verify the domain controlled by that organization. So I followed GitHub's guide on [verifying an organization's domain](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/verifying-your-organizations-domain){:target="_blank"}, but something was not properly working.
+And once that organization was created, I wanted to verify the domain controlled by that organization. So I followed GitHub's guide on [verifying an organization's domain](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/verifying-your-organizations-domain){:target="_blank"}, but something was not properly working.
 
 DuckDuckGoing I stumbled upon an article titled ["Verify GitHub Organization’s Domain on Namecheap"](https://medium.com/@derekfong/verify-github-organizations-domain-on-namecheap-9b2af148679a){:target="_blank"} by a certain [Derek Fong](https://medium.com/@derekfong){:target="_blank"} that did solve the issue where GitHub was unable to verify my organization's domain.
 
