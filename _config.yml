@@ -19,9 +19,9 @@ navbar-links:
   Archive: "archive"
   Organizations:
     - coatl.dev: "https://github.com/coatl-dev"
-    - ignition-api: "https://github.com/ignition-api"
+    - ignition-devs: "https://github.com/ignition-devs"
   Projects:
-    - incendium: "https://github.com/ignition-incendium/incendium"
+    - incendium: "https://github.com/ignition-devs/incendium"
 
 ################
 # --- Logo --- #
@@ -49,8 +49,9 @@ round-avatar: true
 social-network-links:
   email: "cesar@coatl.dev"
   rss: true
-  github: "cesarcoatl"
+  github: cesarcoatl
   mastodon: "fosstodon.org/@cesarcoatl"
+  twitter: __cesarcoatl__
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
