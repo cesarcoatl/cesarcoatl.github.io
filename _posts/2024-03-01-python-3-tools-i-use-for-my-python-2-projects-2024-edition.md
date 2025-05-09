@@ -8,7 +8,7 @@ tags:
 - jython
 - python
 date: 2024-03-01 12:56 -0800
-last-updated: 2025-05-09 13:45 -0700
+last-updated: 2025-05-09 13:54 -0700
 ---
 ## TOC
 
@@ -56,6 +56,7 @@ My tools can be grouped into the following categories:
   - `pydocstyle`
   - `pylint`
   - `sourcery-cli`
+  - `unimport`
 - Type checkers
   - `mypy[python2]==0.971`
 - Automation
