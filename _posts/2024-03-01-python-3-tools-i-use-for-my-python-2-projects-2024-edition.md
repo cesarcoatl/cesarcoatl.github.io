@@ -70,6 +70,7 @@ My tools can be grouped into the following categories:
   - `twine`
 - Package management
   - `pip-tools`
+  - `uv`
 - Others
   - `check-jsonschema`
   - `commitizen`
