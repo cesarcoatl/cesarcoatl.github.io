@@ -8,7 +8,7 @@ tags:
 - jython
 - python
 date: 2024-03-01 12:56 -0800
-last-updated: 2024-09-05 17:00 -0700
+last-updated: 2025-05-09 13:45 -0700
 ---
 ## TOC
 
@@ -167,9 +167,9 @@ In all of my projects I depend on reusable workflows I have created under the `c
 
 ## CI/CD
 
-Finally, CI/CD. As previously mentioned, I have created reusable [workflows](https://github.com/coatl-dev/workflows) and GitHub [actions](https://github.com/coatl-dev/actions), which I am using accross multiple project in both the [ignition-api](https://github.com/ignition-api) and [ignition-incendium](https://github.com/ignition-incendium) GitHub organizations.
+Finally, CI/CD. As previously mentioned, I have created reusable [workflows](https://github.com/coatl-dev/workflows) and GitHub [actions](https://github.com/coatl-dev/actions), which I am using accross multiple projects in both the [coatl-dev](https://github.com/coatl-dev) and [ignition-devs](https://github.com/ignition-devs) GitHub organizations.
 
-But most importantly, I created a Docker image named [six](https://hub.docker.com/r/coatldev/six), based on Ubuntu 22.04 with Python 2.7 and 3 pre-installed, to overcome the Python 2 apocalypse.
+But most importantly, I created a Docker image named [six](https://hub.docker.com/r/coatldev/six), based on Ubuntu ~~22.04~~ 24.04 with Python 2.7, 3.12, and the latest stable release pre-installed, to overcome the Python 2 apocalypse.
 
 ## Conclusion
 
