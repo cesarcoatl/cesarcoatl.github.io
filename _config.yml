@@ -51,7 +51,6 @@ social-network-links:
   rss: true
   github: cesarcoatl
   mastodon: "fosstodon.org/@cesarcoatl"
-  twitter: __cesarcoatl__
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
